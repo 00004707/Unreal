@@ -92,7 +92,8 @@ favicons = [
 ]
 
 notfound_pagename = "404"
-notfound_template = "_extra\\404.rst"
+# todo 
+#notfound_template = "_extra\\404.rst"
 notfound_urls_prefix = "/Unreal/"
 
 hoverxref_auto_ref = True
