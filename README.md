@@ -10,8 +10,10 @@ Using extensions
 * [sphinx_favicon](https://pypi.org/project/sphinx-favicon/)
 * [sphinx-notfound-page](https://github.com/readthedocs/sphinx-notfound-page)
 * [sphinx-hoverxref](https://github.com/readthedocs/sphinx-hoverxref)
+* [sphinx-last-updated-by-git](https://github.com/mgeier/sphinx-last-updated-by-git)
 
 and also
+
 * [sphinx-autobuild](https://github.com/executablebooks/sphinx-autobuild) (optional)
 
 ## How to view the docs
