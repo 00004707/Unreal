@@ -1,0 +1,9 @@
+
+# do not include baked docs
+build/
+
+# ignore all non-converted images, webp/webm only
+*.gif
+*.png
+!source/_static/*
+todo.txt
