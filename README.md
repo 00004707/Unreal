@@ -18,9 +18,9 @@ and also
 
 ## How to view the docs
 
-uhhhhhh todo
+Here: [00004707.github.io/Unreal](https://00004707.github.io/Unreal)
 
-## How to run this on your own
+## How to run this on your own (for whatever reason)
 
 1. Get Python 3.11.4
 1. Install extensions
