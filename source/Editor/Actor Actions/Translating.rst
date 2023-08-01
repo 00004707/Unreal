@@ -45,8 +45,9 @@ Mode can be switched using
 Using gizmo
 ========================
 
-Clicking on any actor is going to show manipulator - gizmo, allowing user to move, rotate or scale it, depending on mode selected.
-All actions are applied from the pivot point, that is set in blueprint editor or in other DCC software (like blender) eg. for static meshes.
+Clicking on any actor is going to show manipulator - gizmo, allowing user to move, rotate or scale the actor.
+
+All actions are applied from the pivot point, that is set in blueprint editor or in other DCC software (like blender) for static meshes.
 
 Gizmo can be moved without moving the actor to make manipulations easier. See :ref:`actor_pivot_offset`
 
@@ -216,11 +217,11 @@ Blocks all actor instance movements, scaling and rotation.
 
 .. note::
 
-    Actors can still be scaled inside of blueprint, this is editor viewport only setting.
+    Actors can still be scaled inside of blueprint (this is editor viewport only setting)
 
 .. note::
 
-    Title is slightly misleading, this locks all transforms including rotation and scaling.
+    Title is slightly confusing, this locks all transforms including rotation and scaling.
 
 .. note::
 

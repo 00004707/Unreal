@@ -10,4 +10,5 @@ This category contains documentation related to Assets in Unreal Engine
     :hidden:
     :glob:
 
+    Assets/Importing.rst
     Assets/*

@@ -26,7 +26,8 @@ Official Documentation available `here <https://docs.unrealengine.com>`_
 Unreal® is a trademark or registered trademark of Epic Games, Inc. in the United States of America and elsewhere.
 
 .. toctree::
-   :hidden:
-   :glob:
+    :hidden:
+    :glob:
+    :maxdepth: 5
 
-   *
+    *

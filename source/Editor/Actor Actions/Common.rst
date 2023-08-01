@@ -244,6 +244,7 @@ Show all at startup
 
 Any actors that had :ref:`show_hide_selected_at_startup` set, this function will reset the state to default.
 |
+ 
 .. _actor_groups:
 
 Actor Groups
@@ -267,7 +268,7 @@ Actors can be grouped to make moving multiple actors easier.
 .. figure:: Common/images/13.webp
     :align: center
 
-    Grouping using context menu
+    Context menu entry
 
 |
 Adding new actors to group (Regroup)

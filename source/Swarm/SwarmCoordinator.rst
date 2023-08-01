@@ -9,7 +9,9 @@ Swarm Coordinator
 
 Swarm coordinator is a software that manages all SwarmAgents present on local network.
 
-It is not configurable. Only single instance of coordinator running is required to manage all distirbuted light baking process on the network.
+It is not configurable. 
+
+Only single instance of coordinator running is required to manage all distirbuted light baking process on the network.
 
 Coordinator window only provides information about connected clients and ability to reset :ref:`Swarm Agents <Swarm Agent>` on them remotely.
 

@@ -20,7 +20,8 @@ extensions = ['sphinx.ext.todo',
               'sphinx.ext.intersphinx',
               'sphinx_favicon',
               "notfound.extension",
-              'sphinx_last_updated_by_git']
+              'myst_parser']
+              #'sphinx_last_updated_by_git']
               #'hoverxref.extension']
 
 templates_path = ['_templates']
@@ -37,7 +38,6 @@ html_theme_options = {
     "light_css_variables": {
         "color-brand-primary": "#0051C4",
         "color-brand-content": "#0051C4",
-        "color-admonition-background": "orange",
         "sidebar_hide_name": True,
         "navigation_with_keys": True,
     },
@@ -100,4 +100,10 @@ hoverxref_auto_ref = True
 hoverxref_role_types = {
     'hoverxref': 'tooltip',
     'ref': 'tooltip',  # for hoverxref_auto_ref config
+}
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.txt': 'markdown',
+    '.md': 'markdown',
 }

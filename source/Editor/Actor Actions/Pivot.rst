@@ -4,27 +4,26 @@
 Actor pivot offset (Move 3D gizmo)
 ============================================
 
-Use pivot offset if it's difficult to place or rotate actor to your target translation. 
-
-
 .. image:: Pivot/images/07.webp
 	:align: center
 
+Use pivot offset if it's difficult to place or rotate actor to your target translation. 
 
+|
 
 Temporary pivot point change
 =====================================================================
 
-
-
 Drag the pivot manually
 ------------------------
-Hover mouse cursor over the gizmo and press :kbd:`LeftAlt + MiddleMouseButton` and drag it.
 
 .. image:: Pivot/images/09.webp
 	:align: center
 	:width: 49%
 
+Hover mouse cursor over the gizmo and press :kbd:`LeftAlt+MiddleMouseButton` and drag it.
+
+|
 .. _actor_pivot_to_cursor_pos:
 
 Set pivot to mouse cursor location
@@ -42,6 +41,7 @@ Grid snapping can be configured in the upper right corner of the viewport.
 .. image:: Pivot/images/04.webp
 	:align: center
 
+|
 Center pivot between multiple actors
 --------------------------------------------------------------
 	
@@ -56,11 +56,11 @@ Center pivot between multiple actors
 .. image:: Pivot/images/06.webp
 	:align: center
 
-
-Make it permament 
+|
+Make pivot offset permament 
 =====================================================================
 
-These changes are temporary. To make Unreal Engine remember your custom settings, set custom pivot offset and select ``Set as Pivot Offset``.
+Pivot point changes are temporary. To make Unreal Engine remember your custom settings, set custom pivot offset and select ``Set as Pivot Offset``.
 
 .. image:: Pivot/images/05.webp
 	:align: center

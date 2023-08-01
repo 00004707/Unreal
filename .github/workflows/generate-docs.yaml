@@ -1,4 +1,4 @@
-name: Docs
+name: Generate Docs
 on: [push, pull_request, workflow_dispatch]
 permissions:
     contents: write
@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
-          pip install sphinx furo sphinx-copybutton sphinxext-opengraph sphinx_favicon sphinx-notfound-page sphinx-hoverxref sphinx-last-updated-by-git
+          pip install sphinx furo sphinx-copybutton sphinxext-opengraph sphinx_favicon sphinx-notfound-page sphinx-hoverxref sphinx-last-updated-by-git myst-parser
       - name: Sphinx build
         run: |
           sphinx-build source build
