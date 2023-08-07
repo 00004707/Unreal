@@ -1,0 +1,1 @@
+You can always add content from built-in project templates using ``Add > Add Feature or Content Pack`` from ``Content Browser`` Tab

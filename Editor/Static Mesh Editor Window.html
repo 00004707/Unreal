@@ -1,0 +1,621 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Static Mesh Menu" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="Editor/Static%20Mesh%20Editor%20Window.html" />
+<meta property="og:site_name" content="unreal-docs" />
+<meta property="og:description" content="viewport ground plame mesh is 40x40x1m Each static mesh edge is selectable. Selected edge will be highlighted in yellow Toolbar: Edit Simplified Collision Add Sphere Simplified Collision - Creates ..." />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="/_images/social_previews/summary_Editor_Static Mesh Editor Window_2b8c643e.png" />
+<meta property="og:image:alt" content="viewport ground plame mesh is 40x40x1m Each static mesh edge is selectable. Selected edge will be highlighted in yellow Toolbar: Edit Simplified Collision Ad..." />
+<meta name="description" content="viewport ground plame mesh is 40x40x1m Each static mesh edge is selectable. Selected edge will be highlighted in yellow Toolbar: Edit Simplified Collision Add Sphere Simplified Collision - Creates ..." />
+<meta name="twitter:card" content="summary_large_image" />
+    <link sizes="16x16" href="../_static/favicon-16x16.png" rel="icon" type="image/png">
+    <link sizes="32x32" href="../_static/favicon-32x32.png" rel="icon" type="image/png">
+    <link sizes="192x192" href="../_static/android-chrome-192x192.png" rel="icon" type="image/png">
+    <link sizes="512x512" href="../_static/android-chrome-512x512.png" rel="icon" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../_static/apple-touch-icon.png" type="image/png"><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Viewport" href="Viewport.html" /><link rel="prev" title="Screenshots" href="Screenshots.html" />
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2023.07.26 -->
+        <title>Static Mesh Menu - 0004707 Unreal Docs</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-brand-primary: #0051C4;
+  --color-brand-content: #0051C4;
+  --sidebar_hide_name: True;
+  --navigation_with_keys: True;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: orange;
+  --color-brand-content: #FF7F00;
+  --sidebar_hide_name: True;
+  --navigation_with_keys: True;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: orange;
+  --color-brand-content: #FF7F00;
+  --sidebar_hide_name: True;
+  --navigation_with_keys: True;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">0004707 Unreal Docs</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/unreal_black.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/unreal_white.png" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">0004707 Unreal Docs</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../Editor.html">Editor</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Editor</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="Actor%20Actions.html">Actor Actions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Actor Actions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="Actor%20Actions/Camera%20Actor.html">Camera Actor Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Actor%20Actions/Common.html">Common Actor Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Actor%20Actions/Pivot.html">Actor pivot offset (Move 3D gizmo)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Actor%20Actions/Snapping.html">Actor Snapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Actor%20Actions/Translating.html">Translating actors in the world</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="Asset%20Browser.html">Asset Browser</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Asset Browser</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="Assets.html">Assets</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Assets</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="Assets/Importing/CommonImportingOptions.html">Common Importing Assets options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Assets/Importing/FBX.html">Importing Assets using FBX Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Assets/Importing/glT.html">Importing Assets using glT/glTF Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Assets/Importing.html">Importing Assets</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="Blueprint%20Menu.html">Blueprint Menu</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Blueprint Menu</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="Blueprint%20Menu/Actor%20Blueprint%20Menu.html">Actor Blueprint Menu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Screenshots.html">Screenshots</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Static Mesh Menu</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="Viewport.html">Viewport</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Viewport</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="Viewport/Cinematic%20Viewport%20Overlays.html">Cinematic Viewport Overlays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Viewport/Customizing%20Viewport%20User%20Interface.html">Customizing Viewport User Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Viewport/Splitting%20Viewport%20and%20Multiple%20Viewports.html">Viewport splitting and multiple viewports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Viewport/Viewport%20Camera.html">Viewport Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Viewport/Viewport%20Overview.html">Viewport overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="World%20Settings.html">World Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Swarm.html">Swarm (Lightmass)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Swarm (Lightmass)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Swarm/SwarmAgent.html">Swarm Agent</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Swarm Agent</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Swarm/SwarmAgent/DeveloperSettings.html">Swarm Agent Developer Settings Tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Swarm/SwarmAgent/Settings.html">Swarm Agent Settings Tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Swarm/SwarmAgent/SetupAndDeployment.html">Swarm Agent Setup &amp; Deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Swarm/SwarmAgent/SoftwareRequirements.html">Swarm Agent Software Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Swarm/SwarmAgent/Tabs.html">Swarm Agent Tabs Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Swarm/SwarmAgent/Toolbar.html">Swarm Agent Toolbar Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Swarm/SwarmCoordinator.html">Swarm Coordinator</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Swarm/Troubleshooting.html">Swarm Troubleshooting</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Swarm Troubleshooting</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Swarm/SwarmTroubleshooting/SwarmErrorPopups.html">Swarm Error Popups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Swarm/SwarmTroubleshooting/SwarmLogErrors.html">Swarm Errors in log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Swarm/SwarmTroubleshooting/SwarmOtherErrors.html">Swarm Other Errors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="static-mesh-menu">
+<span id="editor-static-mesh-menu"></span><h1>Static Mesh Menu<a class="headerlink" href="#static-mesh-menu" title="Permalink to this heading">#</a></h1>
+<figure class="align-center">
+<img alt="../_images/018.webp" src="../_images/018.webp" />
+</figure>
+<p>viewport ground plame mesh is 40x40x1m</p>
+<figure class="align-center">
+<img alt="../_images/223.webp" src="../_images/223.webp" />
+</figure>
+<p>Each static mesh edge is selectable. Selected edge will be highlighted in yellow</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Mesh is triangulated before importing into Unreal Engine. Some faces (quads) have a diagonal edge.</p>
+</div>
+<section id="toolbar">
+<h2>Toolbar<a class="headerlink" href="#toolbar" title="Permalink to this heading">#</a></h2>
+<figure class="align-center">
+<img alt="../_images/028.webp" src="../_images/028.webp" />
+</figure>
+<p>Edit Simplified Collision</p>
+<p>Add Sphere Simplified Collision - Creates a sphere collision than encompasses the mesh
+Add Capsule Simplified Collision - Creates a capsule collision that encompasses the mesh
+Add Box Simplified Collision - Creates a box collision that encompasses the mesh</p>
+<p>Add DOP Collision</p>
+<p>10-DOP-X  - Creates a box with beveled edges on X axis (10 faces in total)
+18DOP - Creat6es a box with all edges beveled (18 faces in total)
+26DOP - Creates a box with all edges and corners beveled (26 faces in total)</p>
+<p>Convert Box to Convex - Converts all Box Simplified collisions to Convex Simplified collisions. Cannot be undone.</p>
+<p>Remove Collision - Removes all simplified collision from the mesh.</p>
+<p>Edit options for collisions are only available if simplified collision was selected in the viewport.</p>
+<p>Copy Collision From Selected Static Mesh - Copies collision from static mesh that is selected in content browser</p>
+<p>Find Source - If asset was imported from FBX/OBJ/… file, this feature opens up location of the source file in Explorer/Finder/…</p>
+<p>Auto Convex Collision</p>
+<p>Opens <a class="reference internal" href="#convex-decomposition"><span class="std std-ref">Convex Decomposition</span></a> Editor tab</p>
+</section>
+<section id="convex-decomposition">
+<span id="id1"></span><h2>Convex Decomposition<a class="headerlink" href="#convex-decomposition" title="Permalink to this heading">#</a></h2>
+<p>This menu allows quick automatic generation of simple collision convex hulls.</p>
+<p>Hull Count - Maximum count of Convex Collision Hulls
+Max Hull Verts - Maximum count of verticles for each generated convex collision hulls.</p>
+<figure class="align-center">
+<img alt="../_images/094.webp" src="../_images/094.webp" />
+</figure>
+<p>Hull Precision - Count of voxels to determine placement of verticles creating each collision hull</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Depending on complexity of the mesh and input settings, this operation can take a while</p>
+</div>
+</section>
+<section id="toolbar-uv-menu">
+<h2>Toolbar UV menu<a class="headerlink" href="#toolbar-uv-menu" title="Permalink to this heading">#</a></h2>
+<figure class="align-center">
+<img alt="../_images/103.webp" src="../_images/103.webp" />
+</figure>
+<p>UV Menu allows previewing or removing UV Maps from static mesh.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If <span class="xref std std-ref">Generate Lightmap UVs</span> was selected while importing static mesh, there will be an extra generated UV Map for lightmap, usually with last index.</p>
+</div>
+<p>Selecting one of UV Map channels enables preview in left lower corner of the viewport</p>
+<figure class="align-center">
+<img alt="../_images/113.webp" src="../_images/113.webp" />
+</figure>
+<p>To remove UV Map press <code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">Selected</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If static mesh has a single UVMap, it cannot be removed.</p>
+<p>UV Maps generated for lightmap cannot be removed via this menu. Change <span class="xref std std-ref">Destination lightmap index</span> to remove it.</p>
+</div>
+</section>
+<section id="extra-viewport-elements">
+<h2>Extra Viewport Elements<a class="headerlink" href="#extra-viewport-elements" title="Permalink to this heading">#</a></h2>
+<p>dataprepviewportsetting
+[TODO]</p>
+<p>Duplicate <code class="docutils literal notranslate"><span class="pre">Player</span> <span class="pre">Collision</span></code> and <code class="docutils literal notranslate"><span class="pre">Visibility</span> <span class="pre">Collision</span></code> view modes</p>
+<figure class="align-center">
+<img alt="../_images/123.webp" src="../_images/123.webp" />
+</figure>
+<section id="view-menu-in-toolbar">
+<h3>View Menu in Toolbar<a class="headerlink" href="#view-menu-in-toolbar" title="Permalink to this heading">#</a></h3>
+<section id="sockets">
+<h4>Sockets<a class="headerlink" href="#sockets" title="Permalink to this heading">#</a></h4>
+<figure class="align-center">
+<img alt="../_images/133.webp" src="../_images/133.webp" />
+</figure>
+<p>Draws a octahedron at each socket position</p>
+<div class="line-block">
+<div class="line">Keyboard Shortcut <code class="docutils literal notranslate"><span class="pre">[ALT]</span> <span class="pre">+</span> <span class="pre">[S]</span></code></div>
+</div>
+</section>
+<section id="verticles">
+<h4>Verticles<a class="headerlink" href="#verticles" title="Permalink to this heading">#</a></h4>
+<figure class="align-center">
+<img alt="../_images/143.webp" src="../_images/143.webp" />
+</figure>
+<p>Draws cubes on each verticle position.</p>
+<div class="line-block">
+<div class="line">Keyboard Shortcut <code class="docutils literal notranslate"><span class="pre">[ALT]</span> <span class="pre">+</span> <span class="pre">[V]</span></code></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not enable on high density meshes! It will slow down and might crash the editor.</p>
+</div>
+</section>
+<section id="vert-colors">
+<h4>Vert Colors<a class="headerlink" href="#vert-colors" title="Permalink to this heading">#</a></h4>
+<figure class="align-center">
+<img alt="../_images/153.webp" src="../_images/153.webp" />
+</figure>
+<p>Shows Vertex Colors created in <a href="#id2"><span class="problematic" id="id3">`DCC Software`_</span></a>. See <span class="xref std std-ref">Importing Vertex Colors</span></p>
+<p>[TODO]
+.. _DCC: Digital Content Creation Software eg. Blender, Maya, 3DSMax…</p>
+</section>
+<section id="normals">
+<h4>Normals<a class="headerlink" href="#normals" title="Permalink to this heading">#</a></h4>
+<figure class="align-center">
+<img alt="../_images/163.webp" src="../_images/163.webp" />
+</figure>
+<p>Shows vertex normals.</p>
+<div class="line-block">
+<div class="line">Keyboard Shortcut <code class="docutils literal notranslate"><span class="pre">[ALT]</span> <span class="pre">+</span> <span class="pre">[N]</span></code></div>
+</div>
+</section>
+<section id="tangents">
+<h4>Tangents<a class="headerlink" href="#tangents" title="Permalink to this heading">#</a></h4>
+<figure class="align-center">
+<img alt="../_images/173.webp" src="../_images/173.webp" />
+</figure>
+<p>Shows vertex tangents. <cite>What is tangent? &lt;https://gamedev.stackexchange.com/questions/51399/what-are-normal-tangent-and-binormal-vectors-and-how-are-they-used&gt;</cite></p>
+<div class="line-block">
+<div class="line">Keyboard Shortcut <code class="docutils literal notranslate"><span class="pre">[ALT]</span> <span class="pre">+</span> <span class="pre">[T]</span></code></div>
+</div>
+</section>
+<section id="binormals">
+<h4>Binormals<a class="headerlink" href="#binormals" title="Permalink to this heading">#</a></h4>
+<figure class="align-center">
+<img alt="../_images/183.webp" src="../_images/183.webp" />
+</figure>
+<p>Shows vertex Binormals. Ortohogonal (perpendicular) vector to normal and tangent.</p>
+<p><cite>More about binormals &lt;https://gamedev.stackexchange.com/questions/51399/what-are-normal-tangent-and-binormal-vectors-and-how-are-they-used&gt;</cite></p>
+<div class="line-block">
+<div class="line">Keyboard Shortcut <code class="docutils literal notranslate"><span class="pre">[ALT]</span> <span class="pre">+</span> <span class="pre">[B]</span></code></div>
+</div>
+</section>
+<section id="pivot">
+<h4>Pivot<a class="headerlink" href="#pivot" title="Permalink to this heading">#</a></h4>
+<figure class="align-center">
+<img alt="../_images/193.webp" src="../_images/193.webp" />
+</figure>
+<p>Shows mesh pivot point.</p>
+<div class="line-block">
+<div class="line">Keyboard Shortcut <code class="docutils literal notranslate"><span class="pre">[ALT]</span> <span class="pre">+</span> <span class="pre">[P]</span></code></div>
+</div>
+</section>
+<section id="grid">
+<h4>Grid<a class="headerlink" href="#grid" title="Permalink to this heading">#</a></h4>
+<figure class="align-center">
+<img alt="../_images/203.webp" src="../_images/203.webp" />
+</figure>
+<p>Shows ground grid. It’s size can be configured in <span class="xref std std-ref">Snapping Menu</span></p>
+</section>
+<section id="bounds">
+<h4>Bounds<a class="headerlink" href="#bounds" title="Permalink to this heading">#</a></h4>
+<figure class="align-center">
+<img alt="../_images/213.webp" src="../_images/213.webp" />
+</figure>
+<p>Shows the bounding box (red) and bounding sphere (yellow) around the mesh.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This also includes the preview ground mesh in the viewport.</p>
+</div>
+</section>
+<section id="simple-collision">
+<h4>Simple Collision<a class="headerlink" href="#simple-collision" title="Permalink to this heading">#</a></h4>
+<figure class="align-center">
+<img alt="../_images/232.webp" src="../_images/232.webp" />
+</figure>
+<p>Shows static mesh simple collision and allows editing it in the viewport. See <span class="xref std std-ref">Creating Simple Collision</span></p>
+</section>
+<section id="complex-collision">
+<h4>Complex Collision<a class="headerlink" href="#complex-collision" title="Permalink to this heading">#</a></h4>
+<figure class="align-center">
+<img alt="../_images/243.webp" src="../_images/243.webp" />
+</figure>
+<p>Shows complex collision. See <span class="xref std std-ref">Complex Collision</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Complex collision cannot be translated, as it is based on on mesh itself.</p>
+</div>
+</section>
+<section id="physical-material-masks">
+<h4>Physical Material Masks<a class="headerlink" href="#physical-material-masks" title="Permalink to this heading">#</a></h4>
+<figure class="align-center">
+<img alt="../_images/253.webp" src="../_images/253.webp" />
+</figure>
+<p>If your mesh has a material with Physical Material Mask set, this will show the mask on the mesh.</p>
+<p>See <span class="xref std std-ref">Setting up Physical Material Masks</span></p>
+</section>
+</section>
+<section id="lod-menu-in-the-toolbar">
+<h3>LOD Menu in the toolbar<a class="headerlink" href="#lod-menu-in-the-toolbar" title="Permalink to this heading">#</a></h3>
+<figure class="align-center">
+<img alt="../_images/262.webp" src="../_images/262.webp" />
+</figure>
+<ul class="simple">
+<li><p><strong>LOD Auto</strong> - Switches LOD levels automatically, based on rendered size of the mesh on the screen</p></li>
+<li><p><strong>LOD X</strong> - Forces preview of X LOD level in this viewport</p></li>
+</ul>
+</section>
+</section>
+<section id="details-panel">
+<h2>Details Panel<a class="headerlink" href="#details-panel" title="Permalink to this heading">#</a></h2>
+<p>Details panel contains all information and configuration of the static mesh. Many entries are the same as shown in <span class="xref std std-ref">Import Settings</span>.</p>
+<section id="material-slots">
+<h3>Material Slots<a class="headerlink" href="#material-slots" title="Permalink to this heading">#</a></h3>
+<figure class="align-center">
+<img alt="../_images/291.webp" src="../_images/291.webp" />
+</figure>
+<p>Shows all materials assigned to this static mesh.</p>
+<p>New slots can be added using <img alt="materialslotadd" src="../_images/302.webp" /> button.</p>
+<p>[TODO] What is the use for them?</p>
+<p>Slots can be named, in <img alt="materialsslotname" src="../_images/312.webp" /></p>
+<p>[TODO] What is the use for the slot name?</p>
+<ul class="simple">
+<li><p><img alt="MaterialsSlotSetFromContentBrowser" src="../_images/322.webp" /> will replace the material in this slot with material selected in <span class="xref std std-ref">Content Browser</span></p></li>
+<li><p><img alt="MaterialsSlotFindMaterialInContentBrowser" src="../_images/332.webp" /> will find assigned material in <span class="xref std std-ref">Content Browser</span>.</p></li>
+<li><p><img alt="MaterialsSlotListMaterialTextures" src="../_images/342.webp" /> shows the list of used textures in material assigned in this material slot. Clicking on any entry will find the texture in <span class="xref std std-ref">Content Browser</span></p></li>
+</ul>
+<p>Using <img alt="MaterialSlotHighlight" src="../_images/352.webp" /> will highlight the mesh part that uses this material.</p>
+<figure class="align-center">
+<img alt="../_images/272.webp" src="../_images/272.webp" />
+</figure>
+<p>Using <img alt="MaterialSlotIsolate" src="../_images/362.webp" /> will hide any static mesh faces using other materials.</p>
+<figure class="align-center">
+<img alt="../_images/282.webp" src="../_images/282.webp" />
+</figure>
+<p>destination lightmap index, if you set it higher than last lastindex+1 it will temporarilty create empty uvmaps and set it to lastindex+1 anyway</p>
+<p>remove degenerates option is force enabled with nanite enabled</p>
+<p>“”doggo_hp_Alberto_hp_old has degenerate tangent bases which will result in incorrect shading.  MikkTSpace relies on tangent bases and may result in mesh corruption, consider disabling this option. “”</p>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="Viewport.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Viewport</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="Screenshots.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Screenshots</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, 00004707
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Static Mesh Menu</a><ul>
+<li><a class="reference internal" href="#toolbar">Toolbar</a></li>
+<li><a class="reference internal" href="#convex-decomposition">Convex Decomposition</a></li>
+<li><a class="reference internal" href="#toolbar-uv-menu">Toolbar UV menu</a></li>
+<li><a class="reference internal" href="#extra-viewport-elements">Extra Viewport Elements</a><ul>
+<li><a class="reference internal" href="#view-menu-in-toolbar">View Menu in Toolbar</a><ul>
+<li><a class="reference internal" href="#sockets">Sockets</a></li>
+<li><a class="reference internal" href="#verticles">Verticles</a></li>
+<li><a class="reference internal" href="#vert-colors">Vert Colors</a></li>
+<li><a class="reference internal" href="#normals">Normals</a></li>
+<li><a class="reference internal" href="#tangents">Tangents</a></li>
+<li><a class="reference internal" href="#binormals">Binormals</a></li>
+<li><a class="reference internal" href="#pivot">Pivot</a></li>
+<li><a class="reference internal" href="#grid">Grid</a></li>
+<li><a class="reference internal" href="#bounds">Bounds</a></li>
+<li><a class="reference internal" href="#simple-collision">Simple Collision</a></li>
+<li><a class="reference internal" href="#complex-collision">Complex Collision</a></li>
+<li><a class="reference internal" href="#physical-material-masks">Physical Material Masks</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lod-menu-in-the-toolbar">LOD Menu in the toolbar</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#details-panel">Details Panel</a><ul>
+<li><a class="reference internal" href="#material-slots">Material Slots</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    </body>
+</html>

@@ -1,0 +1,483 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Swarm Agent Settings Tab" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="Swarm/SwarmAgent/Settings.html" />
+<meta property="og:site_name" content="unreal-docs" />
+<meta property="og:description" content="Cache Settings: CacheFolder: Folder in which Swarm will save temporary cache while building lightning. Relative paths like.\cache are allowed., MaximumCacheSize: Maximum size of the Cache in GB Max..." />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="/_images/social_previews/summary_Swarm_SwarmAgent_Settings_d25faab8.png" />
+<meta property="og:image:alt" content="Cache Settings: CacheFolder: Folder in which Swarm will save temporary cache while building lightning. Relative paths like.\cache are allowed., MaximumCacheS..." />
+<meta name="description" content="Cache Settings: CacheFolder: Folder in which Swarm will save temporary cache while building lightning. Relative paths like.\cache are allowed., MaximumCacheSize: Maximum size of the Cache in GB Max..." />
+<meta name="twitter:card" content="summary_large_image" />
+    <link sizes="16x16" href="../../_static/favicon-16x16.png" rel="icon" type="image/png">
+    <link sizes="32x32" href="../../_static/favicon-32x32.png" rel="icon" type="image/png">
+    <link sizes="192x192" href="../../_static/android-chrome-192x192.png" rel="icon" type="image/png">
+    <link sizes="512x512" href="../../_static/android-chrome-512x512.png" rel="icon" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../_static/apple-touch-icon.png" type="image/png"><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Swarm Agent Setup &amp; Deployment" href="SetupAndDeployment.html" /><link rel="prev" title="Swarm Agent Developer Settings Tab" href="DeveloperSettings.html" />
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2023.07.26 -->
+        <title>Swarm Agent Settings Tab - 0004707 Unreal Docs</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-brand-primary: #0051C4;
+  --color-brand-content: #0051C4;
+  --sidebar_hide_name: True;
+  --navigation_with_keys: True;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: orange;
+  --color-brand-content: #FF7F00;
+  --sidebar_hide_name: True;
+  --navigation_with_keys: True;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: orange;
+  --color-brand-content: #FF7F00;
+  --sidebar_hide_name: True;
+  --navigation_with_keys: True;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">0004707 Unreal Docs</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand" href="../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../_static/unreal_black.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../_static/unreal_white.png" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">0004707 Unreal Docs</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Editor.html">Editor</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Editor</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Editor/Actor%20Actions.html">Actor Actions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Actor Actions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Editor/Actor%20Actions/Camera%20Actor.html">Camera Actor Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Editor/Actor%20Actions/Common.html">Common Actor Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Editor/Actor%20Actions/Pivot.html">Actor pivot offset (Move 3D gizmo)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Editor/Actor%20Actions/Snapping.html">Actor Snapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Editor/Actor%20Actions/Translating.html">Translating actors in the world</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Editor/Asset%20Browser.html">Asset Browser</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Asset Browser</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Editor/Assets.html">Assets</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Assets</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Editor/Assets/Importing/CommonImportingOptions.html">Common Importing Assets options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Editor/Assets/Importing/FBX.html">Importing Assets using FBX Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Editor/Assets/Importing/glT.html">Importing Assets using glT/glTF Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Editor/Assets/Importing.html">Importing Assets</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Editor/Blueprint%20Menu.html">Blueprint Menu</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Blueprint Menu</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Editor/Blueprint%20Menu/Actor%20Blueprint%20Menu.html">Actor Blueprint Menu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Editor/Screenshots.html">Screenshots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Editor/Static%20Mesh%20Editor%20Window.html">Static Mesh Menu</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Editor/Viewport.html">Viewport</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Viewport</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Editor/Viewport/Cinematic%20Viewport%20Overlays.html">Cinematic Viewport Overlays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Editor/Viewport/Customizing%20Viewport%20User%20Interface.html">Customizing Viewport User Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Editor/Viewport/Splitting%20Viewport%20and%20Multiple%20Viewports.html">Viewport splitting and multiple viewports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Editor/Viewport/Viewport%20Camera.html">Viewport Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Editor/Viewport/Viewport%20Overview.html">Viewport overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Editor/World%20Settings.html">World Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../../Swarm.html">Swarm (Lightmass)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Swarm (Lightmass)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../SwarmAgent.html">Swarm Agent</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Swarm Agent</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="DeveloperSettings.html">Swarm Agent Developer Settings Tab</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Swarm Agent Settings Tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SetupAndDeployment.html">Swarm Agent Setup &amp; Deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SoftwareRequirements.html">Swarm Agent Software Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tabs.html">Swarm Agent Tabs Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Toolbar.html">Swarm Agent Toolbar Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../SwarmCoordinator.html">Swarm Coordinator</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Troubleshooting.html">Swarm Troubleshooting</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Swarm Troubleshooting</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../SwarmTroubleshooting/SwarmErrorPopups.html">Swarm Error Popups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../SwarmTroubleshooting/SwarmLogErrors.html">Swarm Errors in log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../SwarmTroubleshooting/SwarmOtherErrors.html">Swarm Other Errors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="swarm-agent-settings-tab">
+<span id="swarmagent-tab-settings"></span><h1>Swarm Agent Settings Tab<a class="headerlink" href="#swarm-agent-settings-tab" title="Permalink to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Setting new value in input fields accepts it immediately. There is no <code class="docutils literal notranslate"><span class="pre">Accept</span></code> or <code class="docutils literal notranslate"><span class="pre">Save</span></code> button.</p>
+</div>
+<section id="cache-settings">
+<span id="swarmagent-cache-settings"></span><h2>Cache Settings<a class="headerlink" href="#cache-settings" title="Permalink to this heading">#</a></h2>
+<section id="cachefolder">
+<span id="swarmagent-settings-cachefolder"></span><h3>CacheFolder<a class="headerlink" href="#cachefolder" title="Permalink to this heading">#</a></h3>
+<p>Folder in which Swarm will save temporary cache while building lightning.</p>
+<div class="line-block">
+<div class="line">Relative paths like <code class="docutils literal notranslate"><span class="pre">.\cache</span></code> are allowed.</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you copy the SwarmAgent on another computer, this setting will be copied too. Make sure this path exists there aswell.</p>
+</div>
+</section>
+<section id="maximumcachesize">
+<span id="swarmagent-settings-maximumcachesize"></span><h3>MaximumCacheSize<a class="headerlink" href="#maximumcachesize" title="Permalink to this heading">#</a></h3>
+<p>Maximum size of the Cache in GB</p>
+</section>
+<section id="maximumjobstokeep">
+<span id="swarmagent-settings-maximumjobstokeep"></span><h3>MaximumJobsToKeep<a class="headerlink" href="#maximumjobstokeep" title="Permalink to this heading">#</a></h3>
+<p>Number of maximum previous lightning build jobs logs and data to keep.</p>
+</section>
+</section>
+<section id="developer-settings">
+<span id="swarmagent-developer-settings"></span><h2>Developer Settings<a class="headerlink" href="#developer-settings" title="Permalink to this heading">#</a></h2>
+<section id="showdevelopermenu">
+<span id="swarmagent-settings-showdevelopermenu"></span><h3>ShowDeveloperMenu<a class="headerlink" href="#showdevelopermenu" title="Permalink to this heading">#</a></h3>
+<p>Shows <code class="docutils literal notranslate"><span class="pre">DeveloperSettings</span></code> tab. Set it to True, as it provides extra settings.</p>
+</section>
+</section>
+<section id="distribution-settings">
+<h2>Distribution Settings<a class="headerlink" href="#distribution-settings" title="Permalink to this heading">#</a></h2>
+<section id="agentgroupname">
+<span id="swarmagent-settings-agentgroupname"></span><h3>AgentGroupName<a class="headerlink" href="#agentgroupname" title="Permalink to this heading">#</a></h3>
+<p>Name of the group that this PC (agent) belongs to.</p>
+<p>Useful if you plan on creating groups with different tasks to process. Otherwise you can keep the value <code class="docutils literal notranslate"><span class="pre">Default</span></code></p>
+</section>
+<section id="allowedremoteagentgroup">
+<span id="swarmagent-settings-allowedremoteagentgroup"></span><h3>AllowedRemoteAgentGroup<a class="headerlink" href="#allowedremoteagentgroup" title="Permalink to this heading">#</a></h3>
+<p>Name of the remote agent group that can start a light bake job on this agent (computer)</p>
+<p>Useful if you plan on creating groups with different tasks to process. Otherwise you can change the value to <code class="docutils literal notranslate"><span class="pre">Default</span></code> or whatever you set
+in <a class="reference internal" href="#swarmagent-settings-agentgroupname"><span class="std std-ref">AgentGroupName</span></a> on agent running on a computer that you will press “Bake Lightning” on.</p>
+</section>
+<section id="allowedremoteagentnames">
+<span id="swarmagent-settings-allowedremoteagentnames"></span><h3>AllowedRemoteAgentNames<a class="headerlink" href="#allowedremoteagentnames" title="Permalink to this heading">#</a></h3>
+<p>A whitelist of agent name entries separated by <code class="docutils literal notranslate"><span class="pre">Space</span></code>, <code class="docutils literal notranslate"><span class="pre">Comma</span></code> or <code class="docutils literal notranslate"><span class="pre">Semicolon</span></code>.</p>
+<p>Agent name is the PC name. <a class="reference external" href="https://support.microsoft.com/en-us/windows/rename-your-windows-10-pc-750bc75d-8ff8-e99a-b9dc-04dff566ae74">See how to change it on Windows</a></p>
+<p>Only names listed here will accept remote baking jobs.</p>
+<ul class="simple">
+<li><p>To allow all agent names set it to <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p></li>
+<li><p>To allow agent names starting with “ASDF” set it to <code class="docutils literal notranslate"><span class="pre">ASDF*</span></code></p></li>
+</ul>
+</section>
+<section id="avoidlocalexecution">
+<span id="swarmagent-settings-avoidlocalexecution"></span><h3>AvoidLocalExecution<a class="headerlink" href="#avoidlocalexecution" title="Permalink to this heading">#</a></h3>
+<p>If “bake lightning” was pressed on this computer, this will make only remote agents to bake lightning.</p>
+</section>
+<section id="coordinatorremotinghost">
+<span id="swarmagent-settings-coordinatorremotinghost"></span><h3>CoordinatorRemotingHost<a class="headerlink" href="#coordinatorremotinghost" title="Permalink to this heading">#</a></h3>
+<p>Name or IP address of the computer that is running Swarm Coordinator.</p>
+</section>
+<section id="enablestandalonemode">
+<span id="swarmagent-settings-enablestandalonemode"></span><h3>EnableStandaloneMode<a class="headerlink" href="#enablestandalonemode" title="Permalink to this heading">#</a></h3>
+<p>Setting value to <code class="docutils literal notranslate"><span class="pre">True</span></code> makes this Swarm Agent only accept baking jobs requested on this machine.</p>
+</section>
+</section>
+<section id="general-settings">
+<span id="swarmagent-settings-general-settings"></span><h2>General Settings<a class="headerlink" href="#general-settings" title="Permalink to this heading">#</a></h2>
+<section id="bringtofront">
+<span id="swarmagent-settings-bringtofront"></span><h3>BringToFront<a class="headerlink" href="#bringtofront" title="Permalink to this heading">#</a></h3>
+<p>If a new light build task has been assigned to the agent, it will bring the Swarm Agent window on top of all other open windows.</p>
+</section>
+</section>
+<section id="log-settings">
+<span id="swarmagent-settings-log-settings"></span><h2>Log Settings<a class="headerlink" href="#log-settings" title="Permalink to this heading">#</a></h2>
+<section id="textfont">
+<span id="swarmagent-settings-textfont"></span><h3>TextFont<a class="headerlink" href="#textfont" title="Permalink to this heading">#</a></h3>
+<p>Font of a text in <a class="reference internal" href="Tabs.html#swarmagent-tab-log"><span class="std std-ref">Log Tab</span></a></p>
+</section>
+<section id="verbosity">
+<span id="swarmagent-settings-verbosity"></span><span id="swarmagent-log-settings-verbosity"></span><h3>Verbosity<a class="headerlink" href="#verbosity" title="Permalink to this heading">#</a></h3>
+<p>Show messages in log of selected level or higher</p>
+<p><strong>Silent</strong> hides any message in log tab.</p>
+</section>
+</section>
+<section id="visualizer-settings">
+<span id="swarmagent-settings-visualizer-settings"></span><h2>Visualizer Settings<a class="headerlink" href="#visualizer-settings" title="Permalink to this heading">#</a></h2>
+<section id="visualizercolors">
+<span id="swarmagent-settings-visualizercolors"></span><h3>VisualizerColors<a class="headerlink" href="#visualizercolors" title="Permalink to this heading">#</a></h3>
+<p>Colors of the visualizer in Swarm Status Tab</p>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="SetupAndDeployment.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Swarm Agent Setup &amp; Deployment</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="DeveloperSettings.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Swarm Agent Developer Settings Tab</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, 00004707
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Swarm Agent Settings Tab</a><ul>
+<li><a class="reference internal" href="#cache-settings">Cache Settings</a><ul>
+<li><a class="reference internal" href="#cachefolder">CacheFolder</a></li>
+<li><a class="reference internal" href="#maximumcachesize">MaximumCacheSize</a></li>
+<li><a class="reference internal" href="#maximumjobstokeep">MaximumJobsToKeep</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#developer-settings">Developer Settings</a><ul>
+<li><a class="reference internal" href="#showdevelopermenu">ShowDeveloperMenu</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#distribution-settings">Distribution Settings</a><ul>
+<li><a class="reference internal" href="#agentgroupname">AgentGroupName</a></li>
+<li><a class="reference internal" href="#allowedremoteagentgroup">AllowedRemoteAgentGroup</a></li>
+<li><a class="reference internal" href="#allowedremoteagentnames">AllowedRemoteAgentNames</a></li>
+<li><a class="reference internal" href="#avoidlocalexecution">AvoidLocalExecution</a></li>
+<li><a class="reference internal" href="#coordinatorremotinghost">CoordinatorRemotingHost</a></li>
+<li><a class="reference internal" href="#enablestandalonemode">EnableStandaloneMode</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#general-settings">General Settings</a><ul>
+<li><a class="reference internal" href="#bringtofront">BringToFront</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#log-settings">Log Settings</a><ul>
+<li><a class="reference internal" href="#textfont">TextFont</a></li>
+<li><a class="reference internal" href="#verbosity">Verbosity</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#visualizer-settings">Visualizer Settings</a><ul>
+<li><a class="reference internal" href="#visualizercolors">VisualizerColors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    </body>
+</html>

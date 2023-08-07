@@ -1,0 +1,869 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Common Importing Assets options" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="Editor/Assets/Importing/CommonImportingOptions.html" />
+<meta property="og:site_name" content="unreal-docs" />
+<meta property="og:description" content="Create Content Folder Hierarchy: If assets are grouped or parented, this feature will place those assets in separate folders with same name as group/parent name. Shared/Linked assets will be placed..." />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="/_images/social_previews/summary_Editor_Assets_Importing_CommonImportingOptions_75c42e60.png" />
+<meta property="og:image:alt" content="Create Content Folder Hierarchy: If assets are grouped or parented, this feature will place those assets in separate folders with same name as group/parent n..." />
+<meta name="description" content="Create Content Folder Hierarchy: If assets are grouped or parented, this feature will place those assets in separate folders with same name as group/parent name. Shared/Linked assets will be placed..." />
+<meta name="twitter:card" content="summary_large_image" />
+    <link sizes="16x16" href="../../../_static/favicon-16x16.png" rel="icon" type="image/png">
+    <link sizes="32x32" href="../../../_static/favicon-32x32.png" rel="icon" type="image/png">
+    <link sizes="192x192" href="../../../_static/android-chrome-192x192.png" rel="icon" type="image/png">
+    <link sizes="512x512" href="../../../_static/android-chrome-512x512.png" rel="icon" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../_static/apple-touch-icon.png" type="image/png"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Importing Assets using FBX Files" href="FBX.html" /><link rel="prev" title="Importing Assets" href="../Importing.html" />
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2023.07.26 -->
+        <title>Common Importing Assets options - 0004707 Unreal Docs</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-brand-primary: #0051C4;
+  --color-brand-content: #0051C4;
+  --sidebar_hide_name: True;
+  --navigation_with_keys: True;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: orange;
+  --color-brand-content: #FF7F00;
+  --sidebar_hide_name: True;
+  --navigation_with_keys: True;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: orange;
+  --color-brand-content: #FF7F00;
+  --sidebar_hide_name: True;
+  --navigation_with_keys: True;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">0004707 Unreal Docs</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand" href="../../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../../_static/unreal_black.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../../_static/unreal_white.png" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">0004707 Unreal Docs</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../../../Editor.html">Editor</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Editor</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Actor%20Actions.html">Actor Actions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Actor Actions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Actor%20Actions/Camera%20Actor.html">Camera Actor Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Actor%20Actions/Common.html">Common Actor Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Actor%20Actions/Pivot.html">Actor pivot offset (Move 3D gizmo)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Actor%20Actions/Snapping.html">Actor Snapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Actor%20Actions/Translating.html">Translating actors in the world</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Asset%20Browser.html">Asset Browser</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Asset Browser</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../../Assets.html">Assets</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Assets</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Common Importing Assets options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FBX.html">Importing Assets using FBX Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glT.html">Importing Assets using glT/glTF Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Importing.html">Importing Assets</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Blueprint%20Menu.html">Blueprint Menu</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Blueprint Menu</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Blueprint%20Menu/Actor%20Blueprint%20Menu.html">Actor Blueprint Menu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Screenshots.html">Screenshots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Static%20Mesh%20Editor%20Window.html">Static Mesh Menu</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Viewport.html">Viewport</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Viewport</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Viewport/Cinematic%20Viewport%20Overlays.html">Cinematic Viewport Overlays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Viewport/Customizing%20Viewport%20User%20Interface.html">Customizing Viewport User Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Viewport/Splitting%20Viewport%20and%20Multiple%20Viewports.html">Viewport splitting and multiple viewports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Viewport/Viewport%20Camera.html">Viewport Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Viewport/Viewport%20Overview.html">Viewport overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../World%20Settings.html">World Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Swarm.html">Swarm (Lightmass)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Swarm (Lightmass)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../Swarm/SwarmAgent.html">Swarm Agent</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Swarm Agent</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmAgent/DeveloperSettings.html">Swarm Agent Developer Settings Tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmAgent/Settings.html">Swarm Agent Settings Tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmAgent/SetupAndDeployment.html">Swarm Agent Setup &amp; Deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmAgent/SoftwareRequirements.html">Swarm Agent Software Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmAgent/Tabs.html">Swarm Agent Tabs Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmAgent/Toolbar.html">Swarm Agent Toolbar Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Swarm/SwarmCoordinator.html">Swarm Coordinator</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../Swarm/Troubleshooting.html">Swarm Troubleshooting</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Swarm Troubleshooting</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmTroubleshooting/SwarmErrorPopups.html">Swarm Error Popups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmTroubleshooting/SwarmLogErrors.html">Swarm Errors in log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmTroubleshooting/SwarmOtherErrors.html">Swarm Other Errors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="common-importing-assets-options">
+<span id="importing-assets-common-options"></span><h1>Common Importing Assets options<a class="headerlink" href="#common-importing-assets-options" title="Permalink to this heading">#</a></h1>
+<section id="create-content-folder-hierarchy">
+<span id="mesh-import-create-content-folder-hierarchy"></span><h2>Create Content Folder Hierarchy<a class="headerlink" href="#create-content-folder-hierarchy" title="Permalink to this heading">#</a></h2>
+<figure class="align-center">
+<img alt="../../../_images/043.webp" src="../../../_images/043.webp" />
+</figure>
+<p>If assets are grouped or parented, this feature will place those assets in separate folders with same name as group/parent name.</p>
+<p>Shared/Linked assets will be placed inside of folder containing first asset in hierarchy that uses it.</p>
+<div class="seealso admonition">
+<p class="admonition-title">See also</p>
+<p>Assets used in this example:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://sketchfab.com/3d-models/island-80036f71b0014f0fbae6732d2465b64d">ISLAND by Stéphane Agullo is licensed under Creative Commons Attribution</a></p></li>
+</ul>
+</div>
+</section>
+<section id="import-as-dynamic">
+<span id="mesh-import-import-as-dynamic"></span><h2>Import as Dynamic<a class="headerlink" href="#import-as-dynamic" title="Permalink to this heading">#</a></h2>
+<p>Sets <span class="xref std std-ref">actor mobility</span> of all imported actors to dynamic, instead of static.</p>
+</section>
+<section id="hierarchy-type">
+<span id="mesh-import-hierarchy-type"></span><h2>Hierarchy type<a class="headerlink" href="#hierarchy-type" title="Permalink to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Create one Blueprint Asset</p>
+<blockquote>
+<div><p>Imported assets will be added to a single blueprint that will be placed in current level. Groups will be converted into scene components.</p>
+</div></blockquote>
+</li>
+</ol>
+<figure class="align-center">
+<img alt="ht_img0" src="../../../_images/062.webp" />
+</figure>
+<ul>
+<li><p>Create one Actor with components</p>
+<blockquote>
+<div><p>Imported assets will be added to single actor in level, <strong>without a blueprint</strong>.</p>
+<p>Actor containing assets will not be shown in asset browser. Assets themselves, will be shown.</p>
+</div></blockquote>
+</li>
+<li><p>Create Level actors</p>
+<blockquote>
+<div><p>Imported assets will be added to level as separate actors. Actors will be automatically attached to parents, if applicable. See <span class="xref std std-ref">Attach Actor</span></p>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="force-front-xaxis">
+<span id="mesh-import-force-front-xaxis"></span><h2>Force Front XAxis<a class="headerlink" href="#force-front-xaxis" title="Permalink to this heading">#</a></h2>
+<p>If your assets are front towards X axis instead of Y- select this option.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While exporting from blender, it looks like it should be aligned towards X- not X axis while this is enabled.</p>
+</div>
+</section>
+<section id="bake-pivot-in-vertex">
+<span id="mesh-import-bake-pivot-in-vertex"></span><h2>Bake Pivot in Vertex<a class="headerlink" href="#bake-pivot-in-vertex" title="Permalink to this heading">#</a></h2>
+<p>Sets custom pivot point position of imported mesh as the pivot point in Unreal Engine</p>
+<div class="hint admonition">
+<p class="admonition-title">Note</p>
+<p>Blender bakes custom mesh pivot point while exporting FBX files.</p>
+</div>
+</section>
+<section id="import-static-mesh-lod">
+<span id="mesh-import-import-static-mesh-lod"></span><h2>Import Static Mesh LOD<a class="headerlink" href="#import-static-mesh-lod" title="Permalink to this heading">#</a></h2>
+<p>Imports custom static mesh LODs. See <span class="xref std std-ref">Creating Static Mesh LOD</span></p>
+<p>Disabled imports only LOD0</p>
+</section>
+<section id="import-skeletal-mesh-lod">
+<span id="mesh-import-import-skeletal-mesh-lod"></span><h2>Import Skeletal Mesh LOD<a class="headerlink" href="#import-skeletal-mesh-lod" title="Permalink to this heading">#</a></h2>
+<p>Imports custom skeletal mesh LODs. See <span class="xref std std-ref">Creating Skeletal Mesh LOD</span></p>
+<p>Disabled imports only LOD0</p>
+</section>
+<section id="invert-normal-maps">
+<span id="mesh-import-invert-normal-maps"></span><h2>Invert Normal Maps<a class="headerlink" href="#invert-normal-maps" title="Permalink to this heading">#</a></h2>
+<p>If your materials contain OpenGL type Normal Maps, use this option to automatically convert them to DirectX format.
+See <span class="xref std std-ref">Normal Maps</span></p>
+</section>
+<section id="generate-missing-collision">
+<span id="mesh-import-generate-missing-collision"></span><h2>Generate Missing Collision<a class="headerlink" href="#generate-missing-collision" title="Permalink to this heading">#</a></h2>
+<p>If any asset inside of FBX file does not have custom collsion, this feature will generate it.</p>
+<div class="note admonition">
+<p class="admonition-title">Note</p>
+<p>This does not override custom collision. See also: <span class="xref std std-ref">Creating Custom Asset Collision</span></p>
+</div>
+</section>
+<section id="vertex-color-import-option">
+<span id="mesh-import-vertex-color-import-option"></span><h2>Vertex Color Import Option<a class="headerlink" href="#vertex-color-import-option" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Replace</strong> - Imports Vertex Colors stored in the FBX file.</p></li>
+<li><p><strong>Ignore</strong> - Does not import vertex colors set in FBX file</p></li>
+<li><p><strong>Override</strong> - Sets vertex color to all verticles to color specified in <a class="reference internal" href="#mesh-import-vertex-override-color"><span class="std std-ref">Vertex Override Color</span></a></p></li>
+</ul>
+</section>
+<section id="vertex-override-color">
+<span id="mesh-import-vertex-override-color"></span><h2>Vertex Override Color<a class="headerlink" href="#vertex-override-color" title="Permalink to this heading">#</a></h2>
+<p>If <span class="xref std std-ref">Vertex Color Import Option</span> is set to override, this defines what Vertex Color to set to all verticles</p>
+</section>
+<section id="remove-degenerates">
+<span id="mesh-import-remove-degenerates"></span><h2>Remove Degenerates<a class="headerlink" href="#remove-degenerates" title="Permalink to this heading">#</a></h2>
+<p>This feature removes all degenerate triangles. (triangles that are squashed and there is no face visible)</p>
+<figure class="align-center">
+<img alt="../../../_images/093.webp" src="../../../_images/093.webp" />
+</figure>
+</section>
+<section id="build-reversed-index-buffer">
+<span id="mesh-import-build-reversed-index-buffer"></span><h2>Build Reversed Index Buffer<a class="headerlink" href="#build-reversed-index-buffer" title="Permalink to this heading">#</a></h2>
+<p>Optimization technique that is used for meshes with negative scale.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>If the mesh will always have positive scale, this can be turned off.</p>
+</div>
+<p>By ticking this option on, these buffers will be created:</p>
+<ul class="simple">
+<li><p>mesh indices reversed index buffer</p></li>
+<li><p>reversed depth-only index buffer</p></li>
+</ul>
+</section>
+<section id="generate-lightmap-uvs">
+<span id="mesh-import-generate-lightmap-uvs"></span><h2>Generate Lightmap UVs<a class="headerlink" href="#generate-lightmap-uvs" title="Permalink to this heading">#</a></h2>
+<p>Generates an UVMap used for <span class="xref std std-ref">lightmaps</span>.</p>
+<div class="note admonition">
+<p class="admonition-title">note</p>
+<p>New UVMap will have highest UVMap index.</p>
+</div>
+<p>See <span class="xref std std-ref">Creating Lightmap UVs</span></p>
+</section>
+<section id="one-convex-hull-per-ucx">
+<span id="mesh-import-one-convex-hull-per-ucx"></span><h2>One Convex Hull per UCX<a class="headerlink" href="#one-convex-hull-per-ucx" title="Permalink to this heading">#</a></h2>
+<p>If a single custom collision object consists of multiple floating meshes, this option merges them into a single convex hull.</p>
+<a class="reference internal image-reference" href="../../../_images/102.webp"><img alt="../../../_images/102.webp" src="../../../_images/102.webp" style="width: 45%;" /></a>
+<a class="reference internal image-reference" href="../../../_images/112.webp"><img alt="../../../_images/112.webp" src="../../../_images/112.webp" style="width: 45%;" /></a>
+<p>Leaving this option unticked, Unreal Engine will split it into multiple collision meshes, the same way as if it would be separated in <span class="xref std std-ref">DCC Software</span> that the mesh is created in.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../../_images/122.webp"><img alt="../../../_images/122.webp" src="../../../_images/122.webp" style="width: 50%;" /></a>
+</figure>
+<div class="note admonition">
+<p class="admonition-title">note</p>
+<p>Multiple custom collision objects created in <span class="xref std std-ref">DCC Software</span> (eg. UCX_Mesh_01 and UCX_Mesh_02) will not be combined into one.</p>
+</div>
+</section>
+<section id="import-normal-method">
+<span id="mesh-import-import-normal-method"></span><h2>Import Normal Method<a class="headerlink" href="#import-normal-method" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Compute Normals</strong> - Ignores normals stored in FBX file and generates new data.</p></li>
+<li><p><strong>Import Normals</strong> - Imports normal data from FBX file but generates tangents and binormals data</p></li>
+<li><p><strong>Import Normals and Tangents</strong> - Imports both normals, tangents and binormals from FBX file.</p></li>
+</ul>
+</section>
+<section id="normal-generation-method">
+<span id="mesh-import-normal-generation-method"></span><h2>Normal Generation Method<a class="headerlink" href="#normal-generation-method" title="Permalink to this heading">#</a></h2>
+<p>If <a class="reference internal" href="#mesh-import-import-normal-method"><span class="std std-ref">Import Normal Method</span></a> is not set to <code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">Normals</span> <span class="pre">and</span> <span class="pre">Tangents</span></code>, generates new normal data using selected alghoritm.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>The Mikk TSpace requires a correctly mapped UVMap, otherwise <strong class="command">&quot;Object has Degenerate Tangent bases which will results in incorrect shading&quot;</strong> error will pop-up while importing.</p>
+<p>This may lead to inaccurate lightining.</p>
+<p>The solution is to either use the <span class="guilabel">Built In</span> alghoritm, or to properly UV map your asset.</p>
+</div>
+<div class="seealso admonition">
+<p class="admonition-title">See Also</p>
+<p><a class="reference external" href="http://www.mikktspace.com/">Official Mikk TSpace website</a></p>
+<p><a class="reference external" href="https://github.com/mmikk/MikkTSpace">Mikk TSpace Github</a></p>
+</div>
+</section>
+<section id="offset-translation">
+<span id="mesh-import-offset-translation"></span><h2>Offset Translation<a class="headerlink" href="#offset-translation" title="Permalink to this heading">#</a></h2>
+<section id="imported-using-content-browser">
+<h3>Imported using content browser<a class="headerlink" href="#imported-using-content-browser" title="Permalink to this heading">#</a></h3>
+<p>Adds or subtracts position of static mesh</p>
+</section>
+<section id="imported-into-the-level">
+<h3>Imported into the level<a class="headerlink" href="#imported-into-the-level" title="Permalink to this heading">#</a></h3>
+<p>Modifies world position of <code class="docutils literal notranslate"><span class="pre">Scene</span></code> actor, that imported assets from source file will be set to be a child of.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Meshes will be imported as normal, without those changes in their blueprints.</p>
+<figure class="align-center">
+<img alt="../../../_images/242.webp" src="../../../_images/242.webp" />
+</figure>
+</div>
+</section>
+</section>
+<section id="offset-rotation">
+<span id="mesh-import-offset-rotation"></span><h2>Offset Rotation<a class="headerlink" href="#offset-rotation" title="Permalink to this heading">#</a></h2>
+<section id="id1">
+<h3>Imported using content browser<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>Adds or subtracts rotation of the static mesh</p>
+</section>
+<section id="id2">
+<h3>Imported into the level<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>Add or subtract world rotation of <code class="docutils literal notranslate"><span class="pre">Scene</span></code> actor that imported assets from source file will be set to be a child of.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Meshes will be imported as normal, without those changes in their blueprints.</p>
+<figure class="align-center">
+<img alt="../../../_images/242.webp" src="../../../_images/242.webp" />
+</figure>
+</div>
+</section>
+</section>
+<section id="offset-uniform-scale">
+<span id="mesh-import-offset-uniform-scale"></span><h2>Offset Uniform Scale<a class="headerlink" href="#offset-uniform-scale" title="Permalink to this heading">#</a></h2>
+<section id="id3">
+<h3>Imported using content browser<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p>Scales the static mesh</p>
+</section>
+<section id="id4">
+<h3>Imported into the level<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<p>Set world scale multiplier of <code class="docutils literal notranslate"><span class="pre">Scene</span></code> actor that imported assets from source file will be set to be a child of.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Meshes will be imported as normal, without those changes in their blueprints.</p>
+<figure class="align-center">
+<img alt="../../../_images/242.webp" src="../../../_images/242.webp" />
+</figure>
+</div>
+</section>
+</section>
+<section id="force-all-mesh-as-type">
+<span id="mesh-import-force-all-mesh-as-type"></span><h2>Force All Mesh as Type<a class="headerlink" href="#force-all-mesh-as-type" title="Permalink to this heading">#</a></h2>
+<p>Forces all meshes from file to be converted into static or skeletal mesh assets.</p>
+</section>
+<section id="import-lods">
+<span id="mesh-import-import-lods"></span><h2>Import Lods<a class="headerlink" href="#import-lods" title="Permalink to this heading">#</a></h2>
+<p>Toggles importing <span class="xref std std-ref">LODs</span> of static and skeletal meshes.</p>
+</section>
+<section id="id5">
+<span id="id6"></span><h2>Vertex Color Import Option<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Replace</strong> - Imports Vertex Colors for new meshes or replaces them when reimporting</p></li>
+<li><p><strong>Ignore</strong> - Does not import Vertex Colors or does not replace them when Reimporting</p></li>
+<li><p><strong>Override</strong> - Sets new Vertex Color to all verticles with values set in <a class="reference internal" href="#mesh-import-vertex-override-color"><span class="std std-ref">Vertex Override Color</span></a></p></li>
+</ul>
+</section>
+<section id="mesh-import-import-vertex-override-color">
+<span id="id7"></span><h2>Vertex Override Color<a class="headerlink" href="#mesh-import-import-vertex-override-color" title="Permalink to this heading">#</a></h2>
+<p>Sets new Vertex Color to all verticles using provided value.</p>
+</section>
+<section id="recompute-normals">
+<span id="mesh-import-import-recompute-normals"></span><h2>Recompute Normals<a class="headerlink" href="#recompute-normals" title="Permalink to this heading">#</a></h2>
+<p>Forces to recompute mesh normals instead of importing normals stored in source file.</p>
+</section>
+<section id="recompute-tangents">
+<span id="mesh-import-recompute-tangents"></span><h2>Recompute Tangents<a class="headerlink" href="#recompute-tangents" title="Permalink to this heading">#</a></h2>
+<p>Forces to recompute normals instead of importing normals stored in source file.</p>
+</section>
+<section id="use-mikk-tspace">
+<span id="mesh-import-use-mikk-tspace"></span><h2>Use Mikk TSpace<a class="headerlink" href="#use-mikk-tspace" title="Permalink to this heading">#</a></h2>
+<p>Uses <span class="guilabel">Mikk TSpace</span> alghoritm to recompute normals, instead of <span class="guilabel">Built In</span> alghoritm.</p>
+<p>See <a class="reference internal" href="#mesh-import-normal-generation-method"><span class="std std-ref">Normal Generation Method</span></a> for more info about differences in those alghoritms</p>
+</section>
+<section id="compute-weighted-normals">
+<span id="mesh-import-compute-weighted-normals"></span><h2>Compute Weighted Normals<a class="headerlink" href="#compute-weighted-normals" title="Permalink to this heading">#</a></h2>
+<p>[TODO]</p>
+</section>
+<section id="use-high-precision-tangent-basis">
+<span id="mesh-import-use-high-precision-tangent-basis"></span><h2>Use High Precision Tangent Basis<a class="headerlink" href="#use-high-precision-tangent-basis" title="Permalink to this heading">#</a></h2>
+<p>[TODO]</p>
+</section>
+<section id="use-full-precision-uvs">
+<span id="mesh-import-use-full-precision-uvs"></span><h2>Use Full Precision UVs<a class="headerlink" href="#use-full-precision-uvs" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="use-backwards-compatible-f16trunc-uvs">
+<span id="mesh-import-use-backwards-compatible-f16trunc-uvs"></span><h2>Use Backwards Compatible F16Trunc UVs<a class="headerlink" href="#use-backwards-compatible-f16trunc-uvs" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="meshes-in-bone-hierarchy">
+<span id="mesh-import-import-meshes-in-bone-hierarchy"></span><h2>Meshes In Bone Hierarchy<a class="headerlink" href="#meshes-in-bone-hierarchy" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="use-t0as-ref-pose">
+<span id="mesh-import-use-t0as-ref-pose"></span><h2>Use T0As Ref Pose<a class="headerlink" href="#use-t0as-ref-pose" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="import-animations">
+<span id="mesh-import-import-animations"></span><h2>Import Animations<a class="headerlink" href="#import-animations" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="import-bone-tracks">
+<span id="mesh-import-import-bone-tracks"></span><h2>Import Bone Tracks<a class="headerlink" href="#import-bone-tracks" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="animation-length">
+<span id="mesh-import-animation-length"></span><h2>Animation Length<a class="headerlink" href="#animation-length" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="frame-import-range">
+<span id="mesh-import-frame-import-range"></span><h2>Frame Import Range<a class="headerlink" href="#frame-import-range" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="use-30hz-to-bake-bone-animation">
+<span id="mesh-import-use-30hz-to-bake-bone-animation"></span><h2>Use 30Hz to Bake Bone Animation<a class="headerlink" href="#use-30hz-to-bake-bone-animation" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="custom-bone-animation-sample-rate">
+<span id="mesh-import-custom-bone-animation-sample-rate"></span><h2>Custom Bone Animation Sample Rate<a class="headerlink" href="#custom-bone-animation-sample-rate" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="snap-to-closest-frame-boundary">
+<span id="mesh-import-snap-to-closest-frame-boundary"></span><h2>Snap To Closest Frame Boundary<a class="headerlink" href="#snap-to-closest-frame-boundary" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="import-attributes-as-curves-or-animation-attributes">
+<span id="mesh-import-import-attributes-as-curves-or-animation-attributes"></span><h2>Import Attributes as Curves or Animation Attributes<a class="headerlink" href="#import-attributes-as-curves-or-animation-attributes" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="set-material-curve-type">
+<span id="mesh-import-set-material-curve-type"></span><h2>Set Material Curve Type<a class="headerlink" href="#set-material-curve-type" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="material-curve-suffixes">
+<span id="mesh-import-material-curve-suffixes"></span><h2>Material Curve Suffixes<a class="headerlink" href="#material-curve-suffixes" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="remove-redundant-keys">
+<span id="mesh-import-remove-redundant-keys"></span><h2>Remove Redundant Keys<a class="headerlink" href="#remove-redundant-keys" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="do-not-import-curves-with-only-0-values">
+<span id="mesh-import-do-not-import-curves-with-only-0-values"></span><h2>Do not import curves with only 0 values<a class="headerlink" href="#do-not-import-curves-with-only-0-values" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="delete-existing-animation-attributes">
+<span id="mesh-import-delete-existing-animation-attributes"></span><h2>Delete Existing Animation Attributes<a class="headerlink" href="#delete-existing-animation-attributes" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="delete-existing-animation-curves">
+<span id="mesh-import-delete-existing-animation-curves"></span><h2>Delete Existing Animation Curves<a class="headerlink" href="#delete-existing-animation-curves" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="delete-existing-morph-target-curves">
+<span id="mesh-import-delete-existing-morph-target-curves"></span><h2>Delete Existing Morph Target Curves<a class="headerlink" href="#delete-existing-morph-target-curves" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="import-materials">
+<span id="mesh-import-import-materials"></span><h2>Import Materials<a class="headerlink" href="#import-materials" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="material-import">
+<span id="mesh-import-material-import"></span><h2>Material Import<a class="headerlink" href="#material-import" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="parent-material">
+<span id="mesh-import-parent-material"></span><h2>Parent Material<a class="headerlink" href="#parent-material" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="import-skeletal-meshes">
+<span id="mesh-import-import-skeletal-meshes"></span><h2>Import Skeletal Meshes<a class="headerlink" href="#import-skeletal-meshes" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="import-content-type">
+<span id="mesh-import-import-content-type"></span><h2>Import Content Type<a class="headerlink" href="#import-content-type" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="import-morph-targets">
+<span id="mesh-import-import-morph-targets"></span><h2>Import Morph Targets<a class="headerlink" href="#import-morph-targets" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="update-skeleton-reference-pose">
+<span id="mesh-import-update-skeleton-reference-pose"></span><h2>Update Skeleton Reference Pose<a class="headerlink" href="#update-skeleton-reference-pose" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="create-physics-asset">
+<span id="mesh-import-create-physics-asset"></span><h2>Create Physics Asset<a class="headerlink" href="#create-physics-asset" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="threshold-position">
+<span id="mesh-import-threshold-position"></span><h2>Threshold Position<a class="headerlink" href="#threshold-position" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="threshold-tangent-normal">
+<span id="mesh-import-threshold-tangent-normal"></span><h2>Threshold Tangent Normal<a class="headerlink" href="#threshold-tangent-normal" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="threshold-uv">
+<span id="mesh-import-threshold-uv"></span><h2>Threshold UV<a class="headerlink" href="#threshold-uv" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="morph-threshold-position">
+<span id="mesh-import-morph-threshold-position"></span><h2>Morph Threshold Position<a class="headerlink" href="#morph-threshold-position" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="import-static-meshes">
+<span id="mesh-import-import-static-meshes"></span><h2>Import Static Meshes<a class="headerlink" href="#import-static-meshes" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="import-collision-according-to-mesh-name">
+<span id="mesh-import-import-collision-according-to-mesh-name"></span><h2>Import Collision According To Mesh Name<a class="headerlink" href="#import-collision-according-to-mesh-name" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="one-conves-hull-per-ucx">
+<span id="mesh-import-one-conves-hull-per-ucx"></span><h2>One Conves Hull Per UCX<a class="headerlink" href="#one-conves-hull-per-ucx" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="build-nanite">
+<span id="mesh-import-build-nanite"></span><h2>Build Nanite<a class="headerlink" href="#build-nanite" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="id8">
+<span id="id9"></span><h2>Build Reversed Index Buffer<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="id10">
+<span id="id11"></span><h2>Generate Lightmap UVs<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="two-sided-disatnce-field-generation">
+<span id="mesh-import-two-sided-disatnce-field-generation"></span><h2>Two Sided Disatnce Field Generation<a class="headerlink" href="#two-sided-disatnce-field-generation" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="enable-physical-material-mask">
+<span id="mesh-import-enable-physical-material-mask"></span><h2>Enable Physical Material Mask<a class="headerlink" href="#enable-physical-material-mask" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="min-lightmap-resolution">
+<span id="mesh-import-min-lightmap-resolution"></span><h2>Min Lightmap Resolution<a class="headerlink" href="#min-lightmap-resolution" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="source-lightmap-index">
+<span id="mesh-import-source-lightmap-index"></span><h2>Source Lightmap Index<a class="headerlink" href="#source-lightmap-index" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="destination-lightmap-index">
+<span id="mesh-import-destination-lightmap-index"></span><h2>Destination Lightmap Index<a class="headerlink" href="#destination-lightmap-index" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="build-scale">
+<span id="mesh-import-build-scale"></span><h2>Build Scale<a class="headerlink" href="#build-scale" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="distance-field-resolution-scale">
+<span id="mesh-import-distance-field-resolution-scale"></span><h2>Distance Field Resolution Scale<a class="headerlink" href="#distance-field-resolution-scale" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="distance-field-replacement-mesh">
+<span id="mesh-import-distance-field-replacement-mesh"></span><h2>Distance Field Replacement Mesh<a class="headerlink" href="#distance-field-replacement-mesh" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="max-lumen-mesh-cards">
+<span id="mesh-import-max-lumen-mesh-cards"></span><h2>Max Lumen Mesh Cards<a class="headerlink" href="#max-lumen-mesh-cards" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="import-textures">
+<span id="mesh-import-import-textures"></span><h2>Import Textures<a class="headerlink" href="#import-textures" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="detect-normal-map-texture">
+<span id="mesh-import-detect-normal-map-texture"></span><h2>Detect Normal Map Texture<a class="headerlink" href="#detect-normal-map-texture" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="flip-normal-map-green-channel">
+<span id="mesh-import-flip-normal-map-green-channel"></span><h2>Flip Normal Map Green Channel<a class="headerlink" href="#flip-normal-map-green-channel" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="import-udims">
+<span id="mesh-import-import-udims"></span><h2>Import UDIMs<a class="headerlink" href="#import-udims" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="file-extensions-to-import-as-long-lat-cubemap">
+<span id="mesh-import-file-extensions-to-import-as-long-lat-cubemap"></span><h2>File Extensions To Import as Long Lat Cubemap<a class="headerlink" href="#file-extensions-to-import-as-long-lat-cubemap" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="prefer-compressed-source-data">
+<span id="mesh-import-prefer-compressed-source-data"></span><h2>Prefer Compressed Source Data<a class="headerlink" href="#prefer-compressed-source-data" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="allow-non-power-of-two">
+<span id="mesh-import-allow-non-power-of-two"></span><h2>Allow Non Power of Two<a class="headerlink" href="#allow-non-power-of-two" title="Permalink to this heading">#</a></h2>
+<p>SOCKET_MeshName_00</p>
+<p>do not apply scale, it’s value is imported into unreal.
+1.0 is ~ 2meter scale socket</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="FBX.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Importing Assets using FBX Files</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../Importing.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Importing Assets</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, 00004707
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Common Importing Assets options</a><ul>
+<li><a class="reference internal" href="#create-content-folder-hierarchy">Create Content Folder Hierarchy</a></li>
+<li><a class="reference internal" href="#import-as-dynamic">Import as Dynamic</a></li>
+<li><a class="reference internal" href="#hierarchy-type">Hierarchy type</a></li>
+<li><a class="reference internal" href="#force-front-xaxis">Force Front XAxis</a></li>
+<li><a class="reference internal" href="#bake-pivot-in-vertex">Bake Pivot in Vertex</a></li>
+<li><a class="reference internal" href="#import-static-mesh-lod">Import Static Mesh LOD</a></li>
+<li><a class="reference internal" href="#import-skeletal-mesh-lod">Import Skeletal Mesh LOD</a></li>
+<li><a class="reference internal" href="#invert-normal-maps">Invert Normal Maps</a></li>
+<li><a class="reference internal" href="#generate-missing-collision">Generate Missing Collision</a></li>
+<li><a class="reference internal" href="#vertex-color-import-option">Vertex Color Import Option</a></li>
+<li><a class="reference internal" href="#vertex-override-color">Vertex Override Color</a></li>
+<li><a class="reference internal" href="#remove-degenerates">Remove Degenerates</a></li>
+<li><a class="reference internal" href="#build-reversed-index-buffer">Build Reversed Index Buffer</a></li>
+<li><a class="reference internal" href="#generate-lightmap-uvs">Generate Lightmap UVs</a></li>
+<li><a class="reference internal" href="#one-convex-hull-per-ucx">One Convex Hull per UCX</a></li>
+<li><a class="reference internal" href="#import-normal-method">Import Normal Method</a></li>
+<li><a class="reference internal" href="#normal-generation-method">Normal Generation Method</a></li>
+<li><a class="reference internal" href="#offset-translation">Offset Translation</a><ul>
+<li><a class="reference internal" href="#imported-using-content-browser">Imported using content browser</a></li>
+<li><a class="reference internal" href="#imported-into-the-level">Imported into the level</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#offset-rotation">Offset Rotation</a><ul>
+<li><a class="reference internal" href="#id1">Imported using content browser</a></li>
+<li><a class="reference internal" href="#id2">Imported into the level</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#offset-uniform-scale">Offset Uniform Scale</a><ul>
+<li><a class="reference internal" href="#id3">Imported using content browser</a></li>
+<li><a class="reference internal" href="#id4">Imported into the level</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#force-all-mesh-as-type">Force All Mesh as Type</a></li>
+<li><a class="reference internal" href="#import-lods">Import Lods</a></li>
+<li><a class="reference internal" href="#id5">Vertex Color Import Option</a></li>
+<li><a class="reference internal" href="#mesh-import-import-vertex-override-color">Vertex Override Color</a></li>
+<li><a class="reference internal" href="#recompute-normals">Recompute Normals</a></li>
+<li><a class="reference internal" href="#recompute-tangents">Recompute Tangents</a></li>
+<li><a class="reference internal" href="#use-mikk-tspace">Use Mikk TSpace</a></li>
+<li><a class="reference internal" href="#compute-weighted-normals">Compute Weighted Normals</a></li>
+<li><a class="reference internal" href="#use-high-precision-tangent-basis">Use High Precision Tangent Basis</a></li>
+<li><a class="reference internal" href="#use-full-precision-uvs">Use Full Precision UVs</a></li>
+<li><a class="reference internal" href="#use-backwards-compatible-f16trunc-uvs">Use Backwards Compatible F16Trunc UVs</a></li>
+<li><a class="reference internal" href="#meshes-in-bone-hierarchy">Meshes In Bone Hierarchy</a></li>
+<li><a class="reference internal" href="#use-t0as-ref-pose">Use T0As Ref Pose</a></li>
+<li><a class="reference internal" href="#import-animations">Import Animations</a></li>
+<li><a class="reference internal" href="#import-bone-tracks">Import Bone Tracks</a></li>
+<li><a class="reference internal" href="#animation-length">Animation Length</a></li>
+<li><a class="reference internal" href="#frame-import-range">Frame Import Range</a></li>
+<li><a class="reference internal" href="#use-30hz-to-bake-bone-animation">Use 30Hz to Bake Bone Animation</a></li>
+<li><a class="reference internal" href="#custom-bone-animation-sample-rate">Custom Bone Animation Sample Rate</a></li>
+<li><a class="reference internal" href="#snap-to-closest-frame-boundary">Snap To Closest Frame Boundary</a></li>
+<li><a class="reference internal" href="#import-attributes-as-curves-or-animation-attributes">Import Attributes as Curves or Animation Attributes</a></li>
+<li><a class="reference internal" href="#set-material-curve-type">Set Material Curve Type</a></li>
+<li><a class="reference internal" href="#material-curve-suffixes">Material Curve Suffixes</a></li>
+<li><a class="reference internal" href="#remove-redundant-keys">Remove Redundant Keys</a></li>
+<li><a class="reference internal" href="#do-not-import-curves-with-only-0-values">Do not import curves with only 0 values</a></li>
+<li><a class="reference internal" href="#delete-existing-animation-attributes">Delete Existing Animation Attributes</a></li>
+<li><a class="reference internal" href="#delete-existing-animation-curves">Delete Existing Animation Curves</a></li>
+<li><a class="reference internal" href="#delete-existing-morph-target-curves">Delete Existing Morph Target Curves</a></li>
+<li><a class="reference internal" href="#import-materials">Import Materials</a></li>
+<li><a class="reference internal" href="#material-import">Material Import</a></li>
+<li><a class="reference internal" href="#parent-material">Parent Material</a></li>
+<li><a class="reference internal" href="#import-skeletal-meshes">Import Skeletal Meshes</a></li>
+<li><a class="reference internal" href="#import-content-type">Import Content Type</a></li>
+<li><a class="reference internal" href="#import-morph-targets">Import Morph Targets</a></li>
+<li><a class="reference internal" href="#update-skeleton-reference-pose">Update Skeleton Reference Pose</a></li>
+<li><a class="reference internal" href="#create-physics-asset">Create Physics Asset</a></li>
+<li><a class="reference internal" href="#threshold-position">Threshold Position</a></li>
+<li><a class="reference internal" href="#threshold-tangent-normal">Threshold Tangent Normal</a></li>
+<li><a class="reference internal" href="#threshold-uv">Threshold UV</a></li>
+<li><a class="reference internal" href="#morph-threshold-position">Morph Threshold Position</a></li>
+<li><a class="reference internal" href="#import-static-meshes">Import Static Meshes</a></li>
+<li><a class="reference internal" href="#import-collision-according-to-mesh-name">Import Collision According To Mesh Name</a></li>
+<li><a class="reference internal" href="#one-conves-hull-per-ucx">One Conves Hull Per UCX</a></li>
+<li><a class="reference internal" href="#build-nanite">Build Nanite</a></li>
+<li><a class="reference internal" href="#id8">Build Reversed Index Buffer</a></li>
+<li><a class="reference internal" href="#id10">Generate Lightmap UVs</a></li>
+<li><a class="reference internal" href="#two-sided-disatnce-field-generation">Two Sided Disatnce Field Generation</a></li>
+<li><a class="reference internal" href="#enable-physical-material-mask">Enable Physical Material Mask</a></li>
+<li><a class="reference internal" href="#min-lightmap-resolution">Min Lightmap Resolution</a></li>
+<li><a class="reference internal" href="#source-lightmap-index">Source Lightmap Index</a></li>
+<li><a class="reference internal" href="#destination-lightmap-index">Destination Lightmap Index</a></li>
+<li><a class="reference internal" href="#build-scale">Build Scale</a></li>
+<li><a class="reference internal" href="#distance-field-resolution-scale">Distance Field Resolution Scale</a></li>
+<li><a class="reference internal" href="#distance-field-replacement-mesh">Distance Field Replacement Mesh</a></li>
+<li><a class="reference internal" href="#max-lumen-mesh-cards">Max Lumen Mesh Cards</a></li>
+<li><a class="reference internal" href="#import-textures">Import Textures</a></li>
+<li><a class="reference internal" href="#detect-normal-map-texture">Detect Normal Map Texture</a></li>
+<li><a class="reference internal" href="#flip-normal-map-green-channel">Flip Normal Map Green Channel</a></li>
+<li><a class="reference internal" href="#import-udims">Import UDIMs</a></li>
+<li><a class="reference internal" href="#file-extensions-to-import-as-long-lat-cubemap">File Extensions To Import as Long Lat Cubemap</a></li>
+<li><a class="reference internal" href="#prefer-compressed-source-data">Prefer Compressed Source Data</a></li>
+<li><a class="reference internal" href="#allow-non-power-of-two">Allow Non Power of Two</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    </body>
+</html>

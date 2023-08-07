@@ -1,0 +1,548 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Importing Assets using FBX Files" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="Editor/Assets/Importing/FBX.html" />
+<meta property="og:site_name" content="unreal-docs" />
+<meta property="og:description" content=", Importing FBX via Import Into Level: Using Import Into Level method will also create FbxSceneImportData asset., Scene Tab: Outline of the scene in source file will be listed on the left side. Out..." />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="/_images/social_previews/summary_Editor_Assets_Importing_FBX_2d5f7a22.png" />
+<meta property="og:image:alt" content=", Importing FBX via Import Into Level: Using Import Into Level method will also create FbxSceneImportData asset., Scene Tab: Outline of the scene in source f..." />
+<meta name="description" content=", Importing FBX via Import Into Level: Using Import Into Level method will also create FbxSceneImportData asset., Scene Tab: Outline of the scene in source file will be listed on the left side. Out..." />
+<meta name="twitter:card" content="summary_large_image" />
+    <link sizes="16x16" href="../../../_static/favicon-16x16.png" rel="icon" type="image/png">
+    <link sizes="32x32" href="../../../_static/favicon-32x32.png" rel="icon" type="image/png">
+    <link sizes="192x192" href="../../../_static/android-chrome-192x192.png" rel="icon" type="image/png">
+    <link sizes="512x512" href="../../../_static/android-chrome-512x512.png" rel="icon" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../_static/apple-touch-icon.png" type="image/png"><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Importing Assets using glT/glTF Files" href="glT.html" /><link rel="prev" title="Common Importing Assets options" href="CommonImportingOptions.html" />
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2023.07.26 -->
+        <title>Importing Assets using FBX Files - 0004707 Unreal Docs</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-brand-primary: #0051C4;
+  --color-brand-content: #0051C4;
+  --sidebar_hide_name: True;
+  --navigation_with_keys: True;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: orange;
+  --color-brand-content: #FF7F00;
+  --sidebar_hide_name: True;
+  --navigation_with_keys: True;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: orange;
+  --color-brand-content: #FF7F00;
+  --sidebar_hide_name: True;
+  --navigation_with_keys: True;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">0004707 Unreal Docs</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand" href="../../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../../_static/unreal_black.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../../_static/unreal_white.png" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">0004707 Unreal Docs</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../../../Editor.html">Editor</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Editor</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Actor%20Actions.html">Actor Actions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Actor Actions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Actor%20Actions/Camera%20Actor.html">Camera Actor Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Actor%20Actions/Common.html">Common Actor Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Actor%20Actions/Pivot.html">Actor pivot offset (Move 3D gizmo)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Actor%20Actions/Snapping.html">Actor Snapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Actor%20Actions/Translating.html">Translating actors in the world</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Asset%20Browser.html">Asset Browser</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Asset Browser</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../../Assets.html">Assets</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Assets</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="CommonImportingOptions.html">Common Importing Assets options</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Importing Assets using FBX Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="glT.html">Importing Assets using glT/glTF Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Importing.html">Importing Assets</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Blueprint%20Menu.html">Blueprint Menu</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Blueprint Menu</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Blueprint%20Menu/Actor%20Blueprint%20Menu.html">Actor Blueprint Menu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Screenshots.html">Screenshots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Static%20Mesh%20Editor%20Window.html">Static Mesh Menu</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Viewport.html">Viewport</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Viewport</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Viewport/Cinematic%20Viewport%20Overlays.html">Cinematic Viewport Overlays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Viewport/Customizing%20Viewport%20User%20Interface.html">Customizing Viewport User Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Viewport/Splitting%20Viewport%20and%20Multiple%20Viewports.html">Viewport splitting and multiple viewports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Viewport/Viewport%20Camera.html">Viewport Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Viewport/Viewport%20Overview.html">Viewport overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../World%20Settings.html">World Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../Swarm.html">Swarm (Lightmass)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Swarm (Lightmass)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../Swarm/SwarmAgent.html">Swarm Agent</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Swarm Agent</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmAgent/DeveloperSettings.html">Swarm Agent Developer Settings Tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmAgent/Settings.html">Swarm Agent Settings Tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmAgent/SetupAndDeployment.html">Swarm Agent Setup &amp; Deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmAgent/SoftwareRequirements.html">Swarm Agent Software Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmAgent/Tabs.html">Swarm Agent Tabs Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmAgent/Toolbar.html">Swarm Agent Toolbar Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Swarm/SwarmCoordinator.html">Swarm Coordinator</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../Swarm/Troubleshooting.html">Swarm Troubleshooting</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Swarm Troubleshooting</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmTroubleshooting/SwarmErrorPopups.html">Swarm Error Popups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmTroubleshooting/SwarmLogErrors.html">Swarm Errors in log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Swarm/SwarmTroubleshooting/SwarmOtherErrors.html">Swarm Other Errors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="importing-assets-using-fbx-files">
+<span id="importing-assets-fbx"></span><h1>Importing Assets using FBX Files<a class="headerlink" href="#importing-assets-using-fbx-files" title="Permalink to this heading">#</a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="importing-fbx-via-import-into-level">
+<span id="importing-assets-fbx-into-level"></span><h2>Importing FBX via <a class="reference internal" href="../Importing.html#importing-assets-import-into-level"><span class="std std-ref">Import Into Level</span></a><a class="headerlink" href="#importing-fbx-via-import-into-level" title="Permalink to this heading">#</a></h2>
+<p>Using <a class="reference internal" href="../Importing.html#importing-assets-import-into-level"><span class="std std-ref">Import Into Level</span></a> method will also create <a class="reference internal" href="#fbxsceneimportdata"><span class="std std-ref">FbxSceneImportData</span></a> asset.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p><img alt="xmark" src="../../../_images/053.webp" /> button on tabs does not work.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As of version 5.1, importing static meshes with custom collision will also create collision actors in the level for some reason.
+Collision is imported properly.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="scene-tab">
+<h3>Scene Tab<a class="headerlink" href="#scene-tab" title="Permalink to this heading">#</a></h3>
+<figure class="align-center">
+<img alt="../../../_images/032.webp" src="../../../_images/032.webp" />
+</figure>
+<p>Outline of the scene in source file will be listed on the left side. Outline contains every asset and group contained in source file.</p>
+<p>To exclude assets or groups from importing, <strong>untick them in their category. Unticking in scene tab won’t change anything</strong></p>
+<figure class="align-center" id="id2">
+<img alt="../../../_images/073.webp" src="../../../_images/073.webp" />
+<figcaption>
+<p><span class="caption-text">Use expand/collapse buttons to quickly show all assets</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="tip admonition">
+<p class="admonition-title">Blender Tip</p>
+<p>Files imported from blender will not be grouped as blender uses –Collections– instead.</p>
+<p>To create fake groups in blender, parent assets to an empty and name it as you wish. Empties do not have to share same collection as assets.</p>
+<p>While importing <a class="reference internal" href="#fbxsceneimportdata"><span class="std std-ref">FbxSceneImportData</span></a> asset will be created, which only purpose is to allow reimporting or adding new assets from single source file.</p>
+</div>
+<section id="import-options">
+<h4>Import Options<a class="headerlink" href="#import-options" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-create-content-folder-hierarchy"><span class="std std-ref">Create Content Folder Hierarchy</span></a></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-import-as-dynamic"><span class="std std-ref">Import as Dynamic</span></a></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-hierarchy-type"><span class="std std-ref">Hierarchy type</span></a></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-force-front-xaxis"><span class="std std-ref">Force Front XAxis</span></a></p></li>
+</ul>
+</section>
+<section id="meshes">
+<h4>Meshes<a class="headerlink" href="#meshes" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-bake-pivot-in-vertex"><span class="std std-ref">Bake Pivot in Vertex</span></a></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-import-static-mesh-lod"><span class="std std-ref">Import Static Mesh LOD</span></a></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-import-skeletal-mesh-lod"><span class="std std-ref">Import Skeletal Mesh LOD</span></a></p></li>
+</ul>
+</section>
+<section id="texture">
+<h4>Texture<a class="headerlink" href="#texture" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-invert-normal-maps"><span class="std std-ref">Invert Normal Maps</span></a></p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="static-meshes-tab">
+<span id="importing-assets-fbx-static-meshes"></span><h3>Static Meshes Tab<a class="headerlink" href="#static-meshes-tab" title="Permalink to this heading">#</a></h3>
+<figure class="align-center">
+<img alt="../../../_images/083.webp" src="../../../_images/083.webp" />
+</figure>
+<p>Unticking elements in this tab will exclude them from importing. You can also select multiple meshes and press <kbd class="kbd docutils literal notranslate">RightMouseButton</kbd> to add or remove them from importing.</p>
+<p>Static meshes tab supports <a class="reference internal" href="#mesh-import-fbximport-setting-sets"><span class="std std-ref">Setting Sets</span></a></p>
+<p><strong>Reimporting</strong></p>
+<p>If window was opened to reimport the file, new and deleted files from source FBX file will be marked with <img alt="meshplus" src="../../../_images/142.webp" /> or <img alt="meshminus" src="../../../_images/132.webp" /></p>
+<p>Files removed from FBX file will be also removed from Unreal Engine project. In order to not remove them, simply untick them.</p>
+<section id="all-items">
+<h4>All items<a class="headerlink" href="#all-items" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-generate-missing-collision"><span class="std std-ref">Generate Missing Collision</span></a></p></li>
+<li><p><span class="xref std std-ref">Mesh Import Vertex Color Import Option</span></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-vertex-override-color"><span class="std std-ref">Vertex Override Color</span></a></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-remove-degenerates"><span class="std std-ref">Remove Degenerates</span></a></p></li>
+<li><p><span class="xref std std-ref">Mesh Import Build Reversed Index Buffer</span></p></li>
+<li><p><span class="xref std std-ref">Mesh Import Generate Lightmap UVs</span></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-one-convex-hull-per-ucx"><span class="std std-ref">One Convex Hull per UCX</span></a></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-import-normal-method"><span class="std std-ref">Import Normal Method</span></a></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-normal-generation-method"><span class="std std-ref">Normal Generation Method</span></a></p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="skeletal-meshes-tab">
+<h3>Skeletal Meshes Tab<a class="headerlink" href="#skeletal-meshes-tab" title="Permalink to this heading">#</a></h3>
+<figure class="align-center">
+<img alt="../../../_images/212.webp" src="../../../_images/212.webp" />
+</figure>
+<p>Skeletal meshes tab supports <a class="reference internal" href="#mesh-import-fbximport-setting-sets"><span class="std std-ref">Setting Sets</span></a></p>
+<section id="skeletal-mesh-tab">
+<h4>Skeletal Mesh Tab<a class="headerlink" href="#skeletal-mesh-tab" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-update-skeleton-reference-pose"><span class="std std-ref">Update Skeleton Reference Pose</span></a></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-create-physics-asset"><span class="std std-ref">Create Physics Asset</span></a></p></li>
+<li><p><span class="xref std std-ref">Mesh Import Preserve Smoothing Groups</span></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-import-meshes-in-bone-hierarchy"><span class="std std-ref">Meshes In Bone Hierarchy</span></a></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-import-morph-targets"><span class="std std-ref">Import Morph Targets</span></a></p></li>
+<li><p><span class="xref std std-ref">Mesh Import Morph Target Thresholds</span></p></li>
+</ul>
+</section>
+<section id="animation-tab">
+<h4>Animation Tab<a class="headerlink" href="#animation-tab" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-import-animations"><span class="std std-ref">Import Animations</span></a></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-animation-length"><span class="std std-ref">Animation Length</span></a></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-frame-import-range"><span class="std std-ref">Frame Import Range</span></a></p></li>
+<li><p><span class="xref std std-ref">Mesh Import Use Default Sample Rate</span></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-snap-to-closest-frame-boundary"><span class="std std-ref">Snap To Closest Frame Boundary</span></a></p></li>
+<li><p><span class="xref std std-ref">Mesh Import Import Attributes as Curves or Animation</span></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-delete-existing-animation-curves"><span class="std std-ref">Delete Existing Animation Curves</span></a></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-delete-existing-animation-attributes"><span class="std std-ref">Delete Existing Animation Attributes</span></a></p></li>
+<li><p><span class="xref std std-ref">Mesh Import Preserve Local Transform</span></p></li>
+<li><p><a class="reference internal" href="CommonImportingOptions.html#mesh-import-delete-existing-morph-target-curves"><span class="std std-ref">Delete Existing Morph Target Curves</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="materials-tab">
+<h3>Materials Tab<a class="headerlink" href="#materials-tab" title="Permalink to this heading">#</a></h3>
+<figure class="align-center">
+<img alt="../../../_images/222.webp" src="../../../_images/222.webp" />
+</figure>
+<p>Unticking any material in this tab will exclude it from importing (or deleting if material was deleted from FBX file after previous import to Unreal Engine)</p>
+<section id="material-path-override">
+<h4>Material path override<a class="headerlink" href="#material-path-override" title="Permalink to this heading">#</a></h4>
+<p>Materials can be imported into different directory.</p>
+<p>All of imported materaials will be placed in one directory. Subdirectories won’t be created even when <span class="xref std std-ref">Create Content Folder Hierarchy</span> is ticked in <span class="xref std std-ref">Mesh Import FBXImport Static Meshes</span></p>
+</section>
+</section>
+<section id="setting-sets">
+<span id="mesh-import-fbximport-setting-sets"></span><h3><strong>Setting Sets</strong><a class="headerlink" href="#setting-sets" title="Permalink to this heading">#</a></h3>
+<p>If multiple of static or skeletal meshes share same import settings, you can use Settings Sets to configure importing faster.</p>
+<p>Use <img alt="fbx_sm_createoverride" src="../../../_images/152.webp" /> and name your new settings set.</p>
+<p>After adding a new setting set, press <kbd class="kbd docutils literal notranslate">RightMouseButton</kbd> on selected static/skeletal meshes and pick new settings set from the context menu.</p>
+<p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">LeftMouseButton</kbd>+<kbd class="kbd docutils literal notranslate">Ctrl</kbd></kbd> to select multiple meshes.</p>
+<figure class="align-center">
+<img alt="../../../_images/192.webp" src="../../../_images/192.webp" />
+</figure>
+<ul class="simple">
+<li><p>To select all static meshes using custom settings set, press <img alt="fbx_sm_selectassetusing" src="../../../_images/162.webp" />.</p></li>
+<li><p>To remove custom settings set press <img alt="fbx_sm_settingsetdelete" src="../../../_images/172.webp" /></p></li>
+<li><p>To preview or modify settings set, but not apply it to the mesh use <img alt="fbx_sm_settingsetlist" src="../../../_images/182.webp" /></p></li>
+<li><p>Assets with custom settings set will be marked as <img alt="fbx_sm_settingseticon" src="../../../_images/202.webp" /></p></li>
+</ul>
+</section>
+<section id="fbxsceneimportdata">
+<span id="id1"></span><h3>FbxSceneImportData<a class="headerlink" href="#fbxsceneimportdata" title="Permalink to this heading">#</a></h3>
+<p>FbxSceneImportData asset purpose is to provide functionality of reimporting, adding and removing assets from single FBX file.</p>
+<p>It is created automatically while <a class="reference internal" href="#importing-assets-fbx-into-level"><span class="std std-ref">importing into level</span></a></p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>If <span class="xref std std-ref">Create Content Folder Hierarchy</span> was checked, new folders might not show up in asset browser on reimporting.</p>
+<p>Creating these folders manually, using <span class="xref std std-ref">Save All</span> or restarting editor will fix the issue.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>If <span class="xref std std-ref">Create Content Folder Hierarchy</span> was checked, assets might temporarily be visible in asset browser as if this option was unchecked. Refreshing asset browser will fix the issue.</p>
+</div>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="glT.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Importing Assets using glT/glTF Files</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="CommonImportingOptions.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Common Importing Assets options</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, 00004707
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Importing Assets using FBX Files</a><ul>
+<li><a class="reference internal" href="#importing-fbx-via-import-into-level">Importing FBX via <span class="xref std std-ref">Import Into Level</span></a><ul>
+<li><a class="reference internal" href="#scene-tab">Scene Tab</a><ul>
+<li><a class="reference internal" href="#import-options">Import Options</a></li>
+<li><a class="reference internal" href="#meshes">Meshes</a></li>
+<li><a class="reference internal" href="#texture">Texture</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#static-meshes-tab">Static Meshes Tab</a><ul>
+<li><a class="reference internal" href="#all-items">All items</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#skeletal-meshes-tab">Skeletal Meshes Tab</a><ul>
+<li><a class="reference internal" href="#skeletal-mesh-tab">Skeletal Mesh Tab</a></li>
+<li><a class="reference internal" href="#animation-tab">Animation Tab</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#materials-tab">Materials Tab</a><ul>
+<li><a class="reference internal" href="#material-path-override">Material path override</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#setting-sets"><strong>Setting Sets</strong></a></li>
+<li><a class="reference internal" href="#fbxsceneimportdata">FbxSceneImportData</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=ccbe24c1"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    </body>
+</html>
