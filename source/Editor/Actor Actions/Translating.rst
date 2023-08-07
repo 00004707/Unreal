@@ -47,9 +47,9 @@ Using gizmo
 
 Clicking on any actor is going to show manipulator - gizmo, allowing user to move, rotate or scale the actor.
 
-All actions are applied from the pivot point, that is set in blueprint editor or in other DCC software (like blender) for static meshes.
+All actions are applied from the actor's pivot point (set in blueprint editor or in other :ref:`DCC software` for static meshes)
 
-Gizmo can be moved without moving the actor to make manipulations easier. See :ref:`actor_pivot_offset`
+Gizmo can be moved without moving the actor to make translation adjustments easier. See :ref:`actor_pivot_offset`
 
 Move and scale
 -------------------
@@ -146,10 +146,10 @@ To move actor using WASD keys, use Pilot option from context menu. or press :kbd
 
 .. note::
 
-	Gizmo position (pivot point) won't move while using this feature. Simply reselect actor to put it into correct position.
+	Gizmo position (pivot point) won't move while using this feature. reselect actor to put it into correct position.
 
 
-To stop simply press eject button in the left upper corner of the viewport.
+To stop press eject button in the left upper corner of the viewport.
 
 .. figure:: Translating/images/28.webp
     :align: center
@@ -157,12 +157,12 @@ To stop simply press eject button in the left upper corner of the viewport.
 .. figure:: Translating/images/27.webp
     :align: center
     
-    Pilot actor feature in action.
+|
 	
 Toggle camera feature
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If the actor that is used in Pilot function has a camera component, this feature toggles between automatic camera and component.
+If the actor that is used in Pilot function has a camera component, this feature toggles between automatic camera and the camera component.
 
 .. figure:: Translating/images/31.webp
     :align: center
@@ -185,9 +185,12 @@ Delta Transform
 .. figure:: Translating/images/40.webp
     :align: center
 
-Simply add or subtract position values to/from current position.
+Adds or subtracts position values to/from current position.
 
-| Unit is centimeters
+.. admonition:: Information 
+    :class: note
+
+    Unit is centimeters
 
 .. figure:: Translating/images/41.webp
     :align: center
@@ -199,7 +202,7 @@ Mirror X/Y/Z
 .. figure:: Translating/images/42.webp
     :align: center
 
-Simply multiply X/Y/Z scale value by (-1)
+Multiply X/Y/Z scale value by (-1)
 
 .. figure:: Translating/images/43.webp
     :align: center
@@ -215,7 +218,8 @@ Blocks all actor instance movements, scaling and rotation.
 
 | This can be quite useful while tweaking camera actor settings, keeping it in place.
 
-.. note::
+.. admonition:: Note
+    :class: hint
 
     Actors can still be scaled inside of blueprint (this is editor viewport only setting)
 
@@ -223,7 +227,8 @@ Blocks all actor instance movements, scaling and rotation.
 
     Title is slightly confusing, this locks all transforms including rotation and scaling.
 
-.. note::
+.. admonition:: Warning
+    :class: caution
 
     3D Gizmo might not be visible while this option is enabled.
 

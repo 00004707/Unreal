@@ -11,7 +11,7 @@ Common Actor Operations
 
 .. _Underground Subway by SO.Art: https://www.unrealengine.com/marketplace/en-US/product/df77038fa58f4f6faf570f1a133c183a
 
-Place actors
+Placing actors
 ===============================
 
 Drag & Drop from the Content Browser
@@ -25,7 +25,7 @@ Drag & Drop from the Content Browser
 Using Context Menu
 --------------------------------------
 
-Place Actor submenu in context menu allows rapid placing common and last used actors.
+Place Actor submenu in context menu allows to place recently used actors quickly.
 
 .. figure:: Common/images/05.webp
     :align: center
@@ -44,8 +44,6 @@ Using Context Menu
 
 .. figure:: Common/images/08.webp
     :align: center
-
-Use ``Replace selected actors with``.
 
 |
 Duplicate actors
@@ -67,7 +65,7 @@ Press :kbd:`Alt` and drag any gizmo axis to duplicate actor.
 Using :kbd:`Ctrl+D` 
 ------------------------------------------
 
-Press :kbd:`Ctrl+D`  and then drag newly created actor using gizmo, or 
+Press :kbd:`Ctrl+D` and then move duplicated actor
 
 .. figure:: Common/images/03.webp
     :align: center
@@ -120,9 +118,15 @@ Select Transparent/Translucent Actors
 
 To select transparent/translucent actors, use Settings menu and enable ``Allow Translucent Selection``
 
-| Transparent actors are actors with material that has blend mode set to other than ``Opaque`` or ``Masked``
+.. admonition:: Info
+    :class: note
 
-| This does not include :ref:`bsp_actors`
+    Transparent actors are actors with material that has blend mode set to other than ``Opaque`` or ``Masked``
+
+.. admonition:: Warning
+    :class: caution
+
+    This does not include :ref:`bsp_actors`
 
 .. figure:: Common/images/10.webp
     :align: center
@@ -164,7 +168,7 @@ Box select Occluded Objects
 .. image:: Common/images/22.webp
     :width: 47%
 
-Allows marquee selection to also select objects behind other objects and outside the view.
+Enables marquee selection to also select objects behind other objects and outside the view.
 
 .. figure:: Common/images/23.webp
     :align: center
@@ -173,10 +177,20 @@ Allows marquee selection to also select objects behind other objects and outside
 Rename Actors
 ===============================
 
+Using :kbd:`F2`
+---------------------------------
+* Press :kbd:`F2` to rename selected actors
+
+
+|
+Using context menu
+---------------------------------
+
 .. figure:: Common/images/32.webp
     :align: center
 
-Press :kbd:`F2` to rename selected actors. or :kbd:`RightClick` on actor and go in ``Edit`` section in context menu.
+
+* :kbd:`RightClick` on the actor and use :menuselection:`Edit --> Rename` context menu function.
 
 .. note::
 
@@ -188,14 +202,25 @@ Change Visibility
 Hide Selected
 --------------------
 
-.. figure:: Common/images/33.webp
-    :align: center
-
-To hide actor in editor, press :kbd:`H`
-
 .. note::
 
     Once you go into play, simulate mode or switch Levels actors will reappear. 
+
+
+Using :kbd:`H`
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To hide actor in editor, press :kbd:`H`
+
+|
+Using context menu
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: Common/images/33.webp
+    :align: center
+
+
+
 
 |
 Show Only Selected
@@ -203,7 +228,8 @@ Show Only Selected
 
 Use ``Show Only Selected`` to hide everything that is not selected.
 
-.. note::
+.. admonition:: Warning
+    :class: caution
 
     This includes lights and sky box.
 
@@ -233,7 +259,7 @@ Show/Hide Selected at startup
 .. figure:: Common/images/37.webp
     :align: center
 
-Once editor is in Play or Simulate state, selected actor will unhide/hide.
+Once editor is in Play or Simulate state, selected actor will toggle it's hide state.
 
 |
 Show all at startup
@@ -242,8 +268,8 @@ Show all at startup
 .. figure:: Common/images/36.webp
     :align: center
 
-Any actors that had :ref:`show_hide_selected_at_startup` set, this function will reset the state to default.
-|
+Any actors that had :ref:`show_hide_selected_at_startup` set will be visible when this function is enabled.
+
  
 .. _actor_groups:
 
@@ -254,21 +280,27 @@ Actor groups combine multiple actor instances into one easily movable element in
 
 Actor Groups cannot be grouped (nested grouping), only merged. :ref:`attaching_actors` feature allows this, not only with single actors but groups too.
 
-|
 Create Actor Group
 ------------------------------
 
 .. figure:: Common/images/12.webp
     :align: center
+    
+|
 
 Actors can be grouped to make moving multiple actors easier.
 
-| Keyboard shortcut: :kbd:`CTRL+G`
+Using :kbd:`CTRL+G`
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Select actors and press :kbd:`CTRL+G` to group them.
+
+Using context menu
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: Common/images/13.webp
     :align: center
 
-    Context menu entry
 
 |
 Adding new actors to group (Regroup)
@@ -299,6 +331,8 @@ Ungroup - Remove Group
 
 Ungrouping removes the group bond between grouped actors.
 
+| Keyboard shortcut: :kbd:`SHIFT+G` while group is selected
+
 |
 Allow Group Selection (Unlock all groups toggle)
 ---------------------------------------------------
@@ -317,12 +351,14 @@ Removing all actors in a group
 .. figure:: Common/images/28.webp
     :align: center
 
-Upon pressing delete on a group, all actors being a part of this group are deleted. Warning message will be shown 
 
 
+Pressing :kbd:`delete` button while group is selected, will delete all actor instances in this group. 
+
+Warning message will be shown 
 
 
-
+|
 .. _attaching_actors:
 
 Attaching Actors
@@ -331,19 +367,30 @@ Attaching Actors
 .. figure:: Common/images/25.webp
     :align: center
 
-If you want to other actor copy transforms (location, rotation and scale) of other actor, but not be a component of it or in a group use ``Attach To`` from actor context menu.
+Use ``Attach To`` in actor context menu.
+
+Attaching will make selected actor transforms relative to other actor without making it a component of that actor.
+
+.. admonition:: Note
+    :class: note
+
+    Attached actors will be visible in :ref:`outliner` hierarchy
+
+    .. figure:: Common/images/27.webp
+        :align: center
 
 .. figure:: Common/images/26.webp
     :align: center
 
-    It does not change scale of objects upon attaching, but after being attached it scales with parent actor.
+    Transforms are relative at the moment of attaching. 
 
-Attached actors will be visible in :ref:`outliner` hierarchy
-
-.. figure:: Common/images/27.webp
-    :align: center
+Removing parent attachment actor
+------------------------------------------
 
 After parent actor deletion, child actors are simply detached.
+
+Nested attaching & Groups
+----------------------------
 
 Unlike :ref:`actor_groups`, child actors can have other child actors attached to them and even whole groups.
 

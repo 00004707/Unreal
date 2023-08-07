@@ -4,7 +4,7 @@ Actor Snapping
 
 .. _grid_snapping:
 
-Move Grid Snapping
+Grid Snapping
 ========================
 
 |
@@ -39,7 +39,7 @@ Rotation Snapping
 .. figure:: Snapping/images/20.webp
     :align: center
 |
-Rotation snapping will force setting the new rotation for selected actor(s) to be in specified increments
+Rotation snapping will force the new rotation for selected actor(s) to be in specified increments
 
 To toggle this feature click on |angle_btn|
 
@@ -157,6 +157,18 @@ Useful for actors with pivot point that is not placed at the bottom.
     Unit is centimeters
 
 |
+Actor Snapping (in Settings)
+==========================================
+
+.. figure:: Snapping/images/71.webp
+    :align: center
+
+Actor snapping tries to snap selected actor to another actor.
+
+| Keyboard Shortcut: :kbd:`CTRL+SHIFT+K`
+
+
+|
 Actor Snapping Context Menu
 ====================================
 
@@ -181,7 +193,7 @@ Snap Origin To Grid
 .. figure:: Snapping/images/46.webp
     :align: center
 
-Snaps actor to nearest grid point on it's pivot point. 
+Snaps the actor to nearest grid point on it's pivot point. 
 
 If multiple actors are selected, pivot point of last selected actor will be used. 
 
@@ -227,15 +239,6 @@ This function works the same way as :ref:`snap_origin_to_grid_per_actor`, but al
     :align: center
 
 |
-Snap to 2D Layer
--------------------------------
-
-.. admonition:: TODO
-   :class: admonition-todo
-
-   Snap to 2D Layer
-
-|
 .. _snap_to_floor:
 
 Snap to floor
@@ -244,7 +247,7 @@ Snap to floor
 .. figure:: Snapping/images/53.webp
     :align: center
 
-Simply snaps actor to the floor (actor with collision under the selected actor). Actor collision will be used.
+Snaps actor to the floor (actor with collision under the selected actor). Actor collision will be used.
 
 | Keyboard shortcut :kbd:`END`
 
@@ -253,7 +256,9 @@ Simply snaps actor to the floor (actor with collision under the selected actor).
     :width: 80%
     
     Snapping with flat floor
-    
+
+|
+
 .. figure:: Snapping/images/63.webp
     :align: center
     :width: 80%
@@ -262,7 +267,9 @@ Simply snaps actor to the floor (actor with collision under the selected actor).
     
 .. note::
 
-    For static meshes collision will be used. For blueprint actors - collision of first component in component hierarchy or pivot point if there is no collision.
+    For static meshes collision will be used. 
+    
+    For blueprint actors - collision of first component in component hierarchy or pivot point if there is no collision.
 
     .. image:: Snapping/images/57.webp
         :align: center
@@ -373,16 +380,7 @@ Socket Snapping
 
     
 
-|
-Actor Snapping (in Settings)
--------------------------------
 
-.. figure:: Snapping/images/71.webp
-    :align: center
-
-Actor snapping tries to snap selected actor to another actor.
-
-| Keyboard Shortcut: :kbd:`CTRL+SHIFT+K`
 
 |
 Planar Snapping
@@ -392,3 +390,105 @@ Planar Snapping
     :class: todo
 
     Planar Snapping
+
+
+2D Snapping
+====================================
+
+.. figure:: Snapping/images/76.webp
+    :align: center
+
+
+2D Snapping options are available when :ref:`Enable Snap Layers <Project Settings 2D Enable Snap Layers>` is enabled in :ref:`Project Settings <Project Settings>`
+
+.. _Snapping Snap Layers:
+
+Snap Layers
+-------------------------------
+
+.. figure:: Snapping/images/77.webp
+    :align: center
+
+Snap layers are Y position presets that allow actors to be snapped to that value.
+
+Using :guilabel:`Edit layers...` will open :ref:`Project Settings 2D Tab <Project Settings 2D >` in which new layers can be created and their names and Y values modified
+
+|
+
+.. _Snapping Snap To 2D Layer:
+Snap to 2D Layer
+-------------------------------
+
+.. figure:: Snapping/images/78.webp
+    :align: center
+
+Snap to 2D Layer function will set the Y position value of selected object to currently active 2D :ref:`snap layer <Snapping Snap Layers>`
+.
+
+
+|
+.. figure:: Snapping/images/75.webp
+    :align: center
+
+    This function is also available in object context menu
+
+.. admonition:: Info
+    :class: note
+
+    The default value of foreground layer is Y = 100
+
+|
+
+Bring selection to front snap layer
+------------------------------------------
+
+Sets the Y position of selected actors to value set in highest :ref:`snap layer <Snapping Snap Layers>` in hierarchy 
+
+|
+
+Bring selection forward a snap layer
+------------------------------------------
+
+Sets the Y position of selected actors to higher :ref:`snap layer <Snapping Snap Layers>` in hierarchy 
+
+|
+
+Send selection backward a snap layer
+------------------------------------------
+
+Sets the Y position of selected actors to lower :ref:`snap layer <Snapping Snap Layers>` in hierarchy 
+
+
+|
+
+Send selection to the back snap layer
+------------------------------------------
+
+Sets the Y position of selected actors to value set in lowest :ref:`snap layer <Snapping Snap Layers>` in hierarchy 
+
+
+|
+
+Select next 2D Layer
+------------------------------------------
+
+
+
+Selects the higher layer in :ref:`snap layer <Snapping Snap Layers>` hierarchy, which then can be used in :ref:`Snapping Snap To 2D Layer` 
+
+The selection will be shown on menu bar.
+
+.. figure:: Snapping/images/79.webp
+    :align: center
+
+|
+
+Select previous 2D Layer
+------------------------------------------
+
+Selects the lower layer in :ref:`snap layer <Snapping Snap Layers>` hierarchy, which then can be used in :ref:`Snapping Snap To 2D Layer`
+
+The selection will be shown on menu bar.
+
+.. figure:: Snapping/images/79.webp
+    :align: center

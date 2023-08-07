@@ -12,6 +12,12 @@
 Importing Assets
 ==========================
 
+Importing assets can be done in multiple ways in Unreal Engine.
+
+.. _Importing Assets Import To Asset Browser:
+
+Importing into asset browser
+============================
 
 .. _Importing Assets Import Into Level:
 
@@ -21,7 +27,7 @@ Import Into Level
 .. figure:: Importing/images/01.webp
     :align: center
 
-To import whole scenes and place them into the level, use ``Import Into Level``
+To import whole scenes and place them directly into the level, use ``Import Into Level``
 
 .. admonition:: Warning
     :class: caution

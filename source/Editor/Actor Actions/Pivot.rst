@@ -29,14 +29,14 @@ Hover mouse cursor over the gizmo and press :kbd:`LeftAlt+MiddleMouseButton` and
 Set pivot to mouse cursor location
 ------------------------------------
 
-Select one or more actors and place your cursor where you wish to place your pivot point, open context menu (``[Right Mouse Button]``) and select ``Pivot > Set Pivot Offset Here``
+Select one or more actors and place your cursor where you wish to place your pivot point, open context menu (:kbd:`RightMouseButton`) and select :menuselection:`Pivot --> Set Pivot Offset Here`
 
 .. image:: Pivot/images/02.webp
 	:width: 80%
 	:align: center
 
-``Set Pivot Point Here (Snapped)`` is going to place it snapped to nearest grid point.
-Grid snapping can be configured in the upper right corner of the viewport.
+:guilabel:`Set Pivot Point Here (Snapped)` is going to place it snapped to nearest grid point.
+Grid snapping can be configured in :ref:`Grid Snapping Settings <grid_snapping>`.
 
 .. image:: Pivot/images/04.webp
 	:align: center
@@ -45,7 +45,7 @@ Grid snapping can be configured in the upper right corner of the viewport.
 Center pivot between multiple actors
 --------------------------------------------------------------
 	
-``Center on Selection`` will set the pivot point in the center of all selected actors.
+:guilabel:`Center on Selection` will set the pivot point in the center of all selected actors.
 
 .. image:: Pivot/images/08.webp
 	:align: center
@@ -60,13 +60,15 @@ Center pivot between multiple actors
 Make pivot offset permament 
 =====================================================================
 
-Pivot point changes are temporary. To make Unreal Engine remember your custom settings, set custom pivot offset and select ``Set as Pivot Offset``.
+Pivot point changes are temporary.
+
+To make Unreal Engine remember your custom settings, set custom pivot offset and select :guilabel:`Set as Pivot Offset`.
 
 .. image:: Pivot/images/05.webp
 	:align: center
 
 
-You can always reset it to default, using ``Reset Pivot Offset``.
+You can always reset it to default, using :guilabel:`Reset Pivot Offset`.
 
 .. note::
 	These changes are only applied to selected actor instances. 

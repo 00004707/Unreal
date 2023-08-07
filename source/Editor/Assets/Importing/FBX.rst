@@ -5,8 +5,10 @@ Importing Assets using FBX Files
 ========================================
 
 |
-FBX (via :ref:`Import Into Level<Importing Assets Import Into Level>`)
---------------------------------------------------------------------------------------------
+
+.. _Importing Assets FBX Into Level:
+Importing FBX via :ref:`Import Into Level<Importing Assets Import Into Level>`
+======================================================================================
 
 
 Using :ref:`Import Into Level <Importing Assets Import Into Level>` method will also create :ref:`FbxSceneImportData` asset.
@@ -34,7 +36,7 @@ Using :ref:`Import Into Level <Importing Assets Import Into Level>` method will 
 
 |
 Scene Tab
-``````````````
+--------------
 
 .. figure:: images/03.webp
     :align: center
@@ -49,9 +51,10 @@ To exclude assets or groups from importing, **untick them in their category. Unt
     Use expand/collapse buttons to quickly show all assets
 
 
-.. note::
+.. admonition:: Blender Tip
+    :class: tip
 
-    Files imported from blender will not be grouped as blender uses ``Collections`` instead.
+    Files imported from blender will not be grouped as blender uses --Collections-- instead.
     
     To create fake groups in blender, parent assets to an empty and name it as you wish. Empties do not have to share same collection as assets.
 
@@ -60,33 +63,35 @@ To exclude assets or groups from importing, **untick them in their category. Unt
 Import Options
 ''''''''''''''''''
 
-* :ref:`Create Content Folder Hierarchy`
-* :ref:`Import as Dynamic`
-* :ref:`Hierarchy Type`
-* :ref:`Force Front XAxis`
+* :ref:`Mesh Import Create Content Folder Hierarchy`
+* :ref:`Mesh Import Import as Dynamic`
+* :ref:`Mesh Import Hierarchy Type`
+* :ref:`Mesh Import Force Front XAxis`
 
 Meshes
 ''''''''''''''''''
 
-* :ref:`Bake Pivot in Vertex`
-* :ref:`Import Static Mesh LOD`
-* :ref:`Import Skeletal Mesh LOD`
+* :ref:`Mesh Import Bake Pivot in Vertex`
+* :ref:`Mesh Import Import Static Mesh LOD`
+* :ref:`Mesh Import Import Skeletal Mesh LOD`
 
 Texture
 ''''''''''''''''''
 
-* :ref:`LevelImport Invert Normal Maps`
+* :ref:`Mesh Import Invert Normal Maps`
 
 |
-.. _ImportToLevel FBXImport Static Meshes:
+.. _Importing Assets FBX Static Meshes:
 
 Static Meshes Tab
-`````````````````````
+--------------------
 
 .. figure:: images/08.webp
     :align: center
 
-Unticking elements in this tab will exclude them from importing. You can also select multiple meshes and press ``Right Mouse Button`` to add or remove them from importing.
+Unticking elements in this tab will exclude them from importing. You can also select multiple meshes and press :kbd:`RightMouseButton` to add or remove them from importing.
+
+Static meshes tab supports :ref:`Mesh Import FBXImport Setting Sets`
 
 **Reimporting**
 
@@ -94,56 +99,58 @@ If window was opened to reimport the file, new and deleted files from source FBX
 
 Files removed from FBX file will be also removed from Unreal Engine project. In order to not remove them, simply untick them.
 
-Skeletal meshes tab supports :ref:`ImportToLevel FBXImport Setting Sets`
-
 .. |meshminus| image:: images/13.webp
 
 .. |meshplus| image:: images/14.webp
 
+All items
+''''''''''''''''''
 
-* :ref:`ImportToLevel Generate Missing Collision`
-* :ref:`ImportToLevel Vertex Color Import Option`
-* :ref:`ImportToLevel Vertex Override Color`
-* :ref:`ImportToLevel Remove Degenerates`
-* :ref:`ImportToLevel Build Reversed Index Buffer`
-* :ref:`ImportToLevel Generate Lightmap UVs`
-* :ref:`ImportToLevel One Convex Hull per UCX`
-* :ref:`ImportToLevel Import Normal Method`
-* :ref:`ImportToLevel Normal Generation Method`
+* :ref:`Mesh Import Generate Missing Collision`
+* :ref:`Mesh Import Vertex Color Import Option`
+* :ref:`Mesh Import Vertex Override Color`
+* :ref:`Mesh Import Remove Degenerates`
+* :ref:`Mesh Import Build Reversed Index Buffer`
+* :ref:`Mesh Import Generate Lightmap UVs`
+* :ref:`Mesh Import One Convex Hull per UCX`
+* :ref:`Mesh Import Import Normal Method`
+* :ref:`Mesh Import Normal Generation Method`
 
 |
 Skeletal Meshes Tab
-```````````````````````
+----------------------
 
 .. figure:: images/21.webp
     :align: center
 
-Skeletal meshes tab supports :ref:`ImportToLevel FBXImport Setting Sets`
+Skeletal meshes tab supports :ref:`Mesh Import FBXImport Setting Sets`
 
+Skeletal Mesh Tab
+''''''''''''''''''
 
-* :ref:`ImportToLevel Update Skeleton Reference Pose`
-* :ref:`ImportToLevel Create Physics Asset`
-* :ref:`ImportToLevel Preserve Smoothing Groups`
-* :ref:`ImportToLevel Import Meshes in Bone Hierarchy`
-* :ref:`ImportToLevel Import Morph Targets`
-* :ref:`ImportToLevel Morph Target Thresholds`
+* :ref:`Mesh Import Update Skeleton Reference Pose`
+* :ref:`Mesh Import Create Physics Asset`
+* :ref:`Mesh Import Preserve Smoothing Groups`
+* :ref:`Mesh Import Import Meshes in Bone Hierarchy`
+* :ref:`Mesh Import Import Morph Targets`
+* :ref:`Mesh Import Morph Target Thresholds`
 
 Animation Tab
 ''''''''''''''''''
 
-* :ref:`ImportToLevel Import Animations`
-* :ref:`ImportToLevel Animation Length`
-* :ref:`ImportToLevel Frame Import Range`
-* :ref:`ImportToLevel Use Default Sample Rate`
-* :ref:`ImportToLevel Snap to Closest Frame Boundary`
-* :ref:`ImportToLevel Import Attributes as Curves or Animation`
-* :ref:`ImportToLevel Deelte Existing Animation Curves`
-* :ref:`ImportToLevel Delete Existing Animation Attributes`
-* :ref:`ImportToLevel Preserve Local Transform`
-* :ref:`ImportToLevel Delete Existing Morph Target Curves`
+* :ref:`Mesh Import Import Animations`
+* :ref:`Mesh Import Animation Length`
+* :ref:`Mesh Import Frame Import Range`
+* :ref:`Mesh Import Use Default Sample Rate`
+* :ref:`Mesh Import Snap to Closest Frame Boundary`
+* :ref:`Mesh Import Import Attributes as Curves or Animation`
+* :ref:`Mesh Import Delete Existing Animation Curves`
+* :ref:`Mesh Import Delete Existing Animation Attributes`
+* :ref:`Mesh Import Preserve Local Transform`
+* :ref:`Mesh Import Delete Existing Morph Target Curves`
 
 Materials Tab
-`````````````````````
+--------------------
 
 .. figure:: images/22.webp
     :align: center
@@ -155,13 +162,13 @@ Material path override
 
 Materials can be imported into different directory. 
 
-All of imported materaials will be placed in one directory. Subdirectories won't be created even when :ref:`Create Content Folder Hierarchy` is ticked in :ref:`ImportToLevel FBXImport Static Meshes`
+All of imported materaials will be placed in one directory. Subdirectories won't be created even when :ref:`Create Content Folder Hierarchy` is ticked in :ref:`Mesh Import FBXImport Static Meshes`
 
 
-.. _ImportToLevel FBXImport Setting Sets:
+.. _Mesh Import FBXImport Setting Sets:
 
 **Setting Sets**
-`````````````````````
+--------------------
 
 If multiple of static or skeletal meshes share same import settings, you can use Settings Sets to configure importing faster.
 
@@ -189,3 +196,26 @@ After adding a new setting set, press :kbd:`RightMouseButton` on selected static
 .. |fbx_sm_settingsetlist| image:: images/18.webp
 
 .. |fbx_sm_settingseticon| image:: images/20.webp
+
+
+.. _FbxSceneImportData :
+
+FbxSceneImportData 
+---------------------------
+
+FbxSceneImportData asset purpose is to provide functionality of reimporting, adding and removing assets from single FBX file.
+
+It is created automatically while :ref:`importing into level <Importing Assets FBX Into Level>`
+
+
+.. admonition:: Tip
+    :class: tip
+    
+    If :ref:`Create Content Folder Hierarchy` was checked, new folders might not show up in asset browser on reimporting.
+    
+    Creating these folders manually, using :ref:`Save All` or restarting editor will fix the issue.
+
+.. admonition:: Tip
+    :class: tip
+
+    If :ref:`Create Content Folder Hierarchy` was checked, assets might temporarily be visible in asset browser as if this option was unchecked. Refreshing asset browser will fix the issue.
